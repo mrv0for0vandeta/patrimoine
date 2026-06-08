@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix Vercel Deployment - Moroccan Heritage Survey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .problem {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 30px 40px;
+            border-radius: 10px;
+        }
+
+        .problem h2 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .solution {
+            padding: 40px;
+        }
+
+        .method {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #e9ecef;
+        }
+
+        .method h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .method h3 {
+            color: #555;
+            margin: 20px 0 10px 0;
+        }
+
+        .method.recommended {
+            border-color: #28a745;
+            background: #f1f9f4;
+        }
+
+        .method.recommended h2::before {
+            content: "⭐ ";
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .button.green {
+            background: #28a745;
+        }
+
+        .button.green:hover {
+            background: #218838;
+        }
+
+        .button.blue {
+            background: #007bff;
+        }
+
+        .button.blue:hover {
+            background: #0056b3;
+        }
+
+        .code-box {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .env-var {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .env-var strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .env-var input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+        }
+
+        .steps {
+            counter-reset: step-counter;
+        }
+
+        .step {
+            counter-increment: step-counter;
+            padding-left: 40px;
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 30px 40px;
+            border-radius: 10px;
+        }
+
+        .success h3 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .method {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 Fix Your Vercel Deployment</h1>
+            <p>Moroccan Heritage Survey Platform</p>
+        </div>
+
+        <div class="problem">
+            <h2>⚠️ Problem Identified</h2>
+            <p><strong>Your Vercel deployment shows 500 errors.</strong></p>
+            <p>The app is deployed but crashes because environment variables (like DATABASE_URL) are not configured in
+                Vercel.</p>
+            <p style="margin-top: 10px;"><strong>Current Status:</strong> <a href="https://patrimoine-jet.vercel.app/"
+                    target="_blank">https://patrimoine-jet.vercel.app/</a> returns 500 error</p>
+        </div>
+
+        <div class="solution">
+            <h2 style="margin-bottom: 30px;">✅ Choose a Solution:</h2>
+
+            <!-- Method 1: Railway -->
+            <div class="method recommended">
+                <h2>Method 1: Deploy to Railway (EASIEST - 1 minute)</h2>
+                <p style="font-size: 1.1em; margin-bottom: 20px;"><strong>Zero configuration required!</strong> Railway
+                    automatically reads your .env.production file.</p>
+
+                <div class="steps">
+                    <div class="step">
+                        <strong>Visit Railway</strong>
+                        <p><a href="https://railway.app/new" target="_blank" class="button green">Go to Railway →</a>
+                        </p>
+                    </div>
+                    <div class="step">
+                        <strong>Click "Deploy from GitHub repo"</strong>
+                    </div>
+                    <div class="step">
+                        <strong>Select: mrv0for0vandeta/patrimoine</strong>
+                    </div>
+                    <div class="step">
+                        <strong>Done!</strong> Railway automatically configures everything.
+                    </div>
+                </div>
+
+                <p style="margin-top: 20px; padding: 15px; background: white; border-radius: 10px;">
+                    <strong>Why Railway?</strong><br>
+                    ✅ No manual environment variable setup<br>
+                    ✅ Automatic deployments on git push<br>
+                    ✅ Better PostgreSQL integration<br>
+                    ✅ Free tier: 500 hours/month<br>
+                    ✅ Built-in monitoring and logs
+                </p>
+            </div>
+
+            <!-- Method 2: Automated Vercel -->
+            <div class="method">
+                <h2>Method 2: Fix Vercel Automatically (2 minutes)</h2>
+                <p>Use the automated setup script to configure Vercel.</p>
+
+                <div class="code-box">
+                    # Install Vercel CLI (if not already)<br>
+                    npm install -g vercel<br><br>
+
+                    # Login to Vercel<br>
+                    vercel login<br><br>
+
+                    # Run automated setup<br>
+                    node setup-vercel.js<br><br>
+
+                    # Deploy<br>
+                    vercel --prod
+                </div>
+
+                <p style="margin-top: 20px;">The script will automatically add all 7 environment variables to your
+                    Vercel project.</p>
+            </div>
+
+            <!-- Method 3: Manual Vercel -->
+            <div class="method">
+                <h2>Method 3: Fix Vercel Manually (5 minutes)</h2>
+                <p>Add environment variables directly in Vercel dashboard.</p>
+
+                <div class="steps">
+                    <div class="step">
+                        <strong>Open Vercel Environment Variables Page</strong>
+                        <p><a href="https://vercel.com/mrv0for0vandeta/patrimoine-jet/settings/environment-variables"
+                                target="_blank" class="button blue">Open Vercel Settings →</a></p>
+                    </div>
+                    <div class="step">
+                        <strong>Add these 7 variables (click to copy):</strong>
+
+                        <div class="env-var">
+                            <strong>DATABASE_URL</strong>
+                            <input type="text" id="var1"
+                                value="postgresql://postgres.elswjgrymyiklvsjimav:Medmahdi2025+@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
+                                readonly>
+                            <button class="copy-btn" onclick="copyText('var1')">📋 Copy</button>
+                        </div>
+
+                        <div class="env-var">
+                            <strong>NODE_ENV</strong>
+                            <input type="text" id="var2" value="production" readonly>
+                            <button class="copy-btn" onclick="copyText('var2')">📋 Copy</button>
+                        </div>
+
+                        <div class="env-var">
+                            <strong>JWT_SECRET</strong>
+                            <input type="text" id="var3"
+                                value="moroccan_heritage_jwt_secret_2024_secure_minimum_32_chars" readonly>
+                            <button class="copy-btn" onclick="copyText('var3')">📋 Copy</button>
+                        </div>
+
+                        <div class="env-var">
+                            <strong>SESSION_SECRET</strong>
+                            <input type="text" id="var4" value="moroccan_session_secret_2024_secure_minimum_32_chars"
+                                readonly>
+                            <button class="copy-btn" onclick="copyText('var4')">📋 Copy</button>
+                        </div>
+
+                        <div class="env-var">
+                            <strong>ADMIN_USERNAME</strong>
+                            <input type="text" id="var5" value="admin" readonly>
+                            <button class="copy-btn" onclick="copyText('var5')">📋 Copy</button>
+                        </div>
+
+                        <div class="env-var">
+                            <strong>ADMIN_PASSWORD</strong>
+                            <input type="text" id="var6" value="Patrimoine2024!" readonly>
+                            <button class="copy-btn" onclick="copyText('var6')">📋 Copy</button>
+                        </div>
+
+                        <div class="env-var">
+                            <strong>ADMIN_EMAIL</strong>
+                            <input type="text" id="var7" value="admin@patrimoine.gov.ma" readonly>
+                            <button class="copy-btn" onclick="copyText('var7')">📋 Copy</button>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <strong>Redeploy</strong>
+                        <p>Go to <a href="https://vercel.com/mrv0for0vandeta/patrimoine-jet" target="_blank">your
+                                deployments</a> → Click latest → Click "Redeploy"</p>
+                    </div>
+                    <div class="step">
+                        <strong>Wait 1-2 minutes</strong>
+                    </div>
+                    <div class="step">
+                        <strong>Test it!</strong>
+                        <p><a href="https://patrimoine-jet.vercel.app/" target="_blank" class="button">Visit Your Site
+                                →</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success">
+            <h3>✅ How to Verify It's Working:</h3>
+            <p>After deploying, check these URLs:</p>
+            <ul style="margin-top: 10px; padding-left: 20px;">
+                <li><strong>Homepage:</strong> <a href="https://patrimoine-jet.vercel.app/"
+                        target="_blank">https://patrimoine-jet.vercel.app/</a> - Should show the survey platform (no 500
+                    error)</li>
+                <li><strong>Health Check:</strong> <a href="https://patrimoine-jet.vercel.app/health"
+                        target="_blank">https://patrimoine-jet.vercel.app/health</a> - Should show:
+                    <code>{"success": true}</code></li>
+                <li><strong>Admin Panel:</strong> <a href="https://patrimoine-jet.vercel.app/admin"
+                        target="_blank">https://patrimoine-jet.vercel.app/admin</a> - Login with admin / Patrimoine2024!
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function copyText(id) {
+            const input = document.getElementById(id);
+            input.select();
+            document.execCommand('copy');
+
+            const button = input.nextElementSibling;
+            const originalText = button.textContent;
+            button.textContent = '✅ Copied!';
+            button.style.background = '#28a745';
+
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

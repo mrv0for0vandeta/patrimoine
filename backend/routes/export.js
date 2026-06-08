@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const { Parser } = require('json2csv');
 const XLSX = require('xlsx');
-const dbManager = require('../utils/database-sqlite3');
+const dbManager = require('../utils/database');
 const { authenticateToken, authorizeRole, logActivity } = require('../middleware/auth');
 const { NotFoundError, ValidationError } = require('../middleware/errorHandler');
 

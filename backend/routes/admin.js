@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const QRCode = require('qrcode');
 const path = require('path');
 const fs = require('fs');
-const dbManager = require('../utils/database-sqlite3');
+const dbManager = require('../utils/database');
 const { authenticateToken, authorizeRole, logActivity } = require('../middleware/auth');
 const { ValidationError, NotFoundError } = require('../middleware/errorHandler');
 

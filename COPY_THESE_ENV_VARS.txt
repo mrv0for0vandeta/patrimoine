@@ -1,0 +1,55 @@
+=====================================================
+   COPY THESE TO VERCEL ENVIRONMENT VARIABLES
+=====================================================
+
+Go to: https://vercel.com/mrv0for0vandeta/patrimoine-jet/settings/environment-variables
+
+Click "Add Environment Variable" for each one below:
+
+-----------------------------------------------------
+1. DATABASE_URL
+-----------------------------------------------------
+postgresql://postgres.elswjgrymyiklvsjimav:Medmahdi2025+@aws-0-us-east-1.pooler.supabase.com:6543/postgres
+
+-----------------------------------------------------
+2. NODE_ENV
+-----------------------------------------------------
+production
+
+-----------------------------------------------------
+3. JWT_SECRET
+-----------------------------------------------------
+moroccan_heritage_jwt_secret_2024_secure_minimum_32_chars
+
+-----------------------------------------------------
+4. SESSION_SECRET
+-----------------------------------------------------
+moroccan_session_secret_2024_secure_minimum_32_chars
+
+-----------------------------------------------------
+5. ADMIN_USERNAME
+-----------------------------------------------------
+admin
+
+-----------------------------------------------------
+6. ADMIN_PASSWORD
+-----------------------------------------------------
+Patrimoine2024!
+
+-----------------------------------------------------
+7. ADMIN_EMAIL
+-----------------------------------------------------
+admin@patrimoine.gov.ma
+
+=====================================================
+
+After adding all 7 variables:
+1. Go to: https://vercel.com/mrv0for0vandeta/patrimoine-jet
+2. Click on your latest deployment
+3. Click "Redeploy" button
+4. Wait 1-2 minutes
+5. Visit: https://patrimoine-jet.vercel.app/
+
+✅ Your site should now work without 500 errors!
+
+=====================================================

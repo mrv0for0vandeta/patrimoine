@@ -1,4 +1,4 @@
-const dbManager = require('./database-sqlite3');
+const dbManager = require('./database');
 
 /**
  * Survey Data Seeding Utility

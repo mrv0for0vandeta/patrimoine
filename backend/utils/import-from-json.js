@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const dbManager = require('./database-sqlite3');
+const dbManager = require('./database');
 
 /**
  * Import surveys from JSON files into the database

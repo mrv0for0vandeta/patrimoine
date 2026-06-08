@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-const dbManager = require('./database-sqlite3');
+const dbManager = require('./database');
 
 async function initializeDatabase() {
     console.log('\n===========================================');

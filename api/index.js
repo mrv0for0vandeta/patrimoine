@@ -8,8 +8,8 @@ const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 
-// Import Supabase database manager
-const dbManager = require('../backend/utils/database-supabase');
+// Import database manager (auto-detects Supabase or SQLite)
+const dbManager = require('../backend/utils/database');
 
 // Import routes
 const authRoutes = require('../backend/routes/auth');
@@ -91,27 +91,24 @@ async function init() {
     if (!initialized) {
         try {
             console.log('Initializing database...');
+            console.log('DATABASE_URL exists:', !!process.env.DATABASE_URL);
+            console.log('NODE_ENV:', process.env.NODE_ENV);
+
             await dbManager.initialize();
             initialized = true;
-            console.log('✓ Database initialized');
+            console.log('✓ Database initialized successfully');
         } catch (error) {
-            console.error('✗ Database initialization failed:', error);
+            console.error('✗ Database initialization failed:', error.message);
+            console.error('Stack:', error.stack);
             throw error;
         }
     }
 }
 
+// Initialize on module load (not per request)
+init().catch(err => {
+    console.error('Failed to initialize on startup:', err);
+});
+
 // Export handler for Vercel
-module.exports = async (req, res) => {
-    try {
-        await init();
-        return app(req, res);
-    } catch (error) {
-        console.error('Handler error:', error);
-        return res.status(500).json({
-            success: false,
-            error: 'Internal server error',
-            message: error.message
-        });
-    }
-};
+module.exports = app;

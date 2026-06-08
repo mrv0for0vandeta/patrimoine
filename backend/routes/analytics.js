@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbManager = require('../utils/database-sqlite3');
+const dbManager = require('../utils/database');
 const { authenticateToken } = require('../middleware/auth');
 const { NotFoundError } = require('../middleware/errorHandler');
 

@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const dbManager = require('../utils/database-sqlite3');
+const dbManager = require('../utils/database');
 
 /**
  * Authentication Middleware

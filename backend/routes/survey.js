@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { v4: uuidv4 } = require('uuid');
-const dbManager = require('../utils/database-sqlite3');
+const dbManager = require('../utils/database');
 const { authenticateToken, authorizeRole, logActivity } = require('../middleware/auth');
 const { ValidationError, NotFoundError } = require('../middleware/errorHandler');
 

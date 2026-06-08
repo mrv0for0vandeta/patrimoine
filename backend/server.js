@@ -8,13 +8,8 @@ const rateLimit = require('express-rate-limit');
 const path = require('path');
 
 // Import utilities and middleware
-// Use Supabase/PostgreSQL if DATABASE_URL is set, otherwise use SQLite
-const useSupabase = process.env.DATABASE_URL || process.env.SUPABASE_DB_URL;
-const dbManager = useSupabase
-    ? require('./utils/database-supabase')
-    : require('./utils/database-sqlite3');
-
-console.log(`Using ${useSupabase ? 'Supabase PostgreSQL' : 'SQLite'} database`);
+// Use auto-detecting database manager (Supabase or SQLite)
+const dbManager = require('./utils/database');
 
 const { logger, requestLogger } = require('./middleware/logger');
 const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');

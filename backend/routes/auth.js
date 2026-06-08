@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { v4: uuidv4 } = require('uuid');
-const dbManager = require('../utils/database-sqlite3');
+const dbManager = require('../utils/database');
 const { authenticateToken } = require('../middleware/auth');
 const { ValidationError } = require('../middleware/errorHandler');
 
