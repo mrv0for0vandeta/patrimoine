@@ -40,6 +40,8 @@ app.use(helmet({
             styleSrc: ["'self'", "'unsafe-inline'"],
             scriptSrc: ["'self'", "'unsafe-inline'"],
             imgSrc: ["'self'", "data:", "https:"],
+            workerSrc: ["'self'"],
+            connectSrc: ["'self'"],
         },
     },
     crossOriginEmbedderPolicy: false,
@@ -94,6 +96,19 @@ if (Array.isArray(logger)) {
 // =====================================================
 // STATIC FILES
 // =====================================================
+
+// Serve service worker at root level
+app.get('/service-worker.js', (req, res) => {
+    res.setHeader('Content-Type', 'application/javascript');
+    res.setHeader('Service-Worker-Allowed', '/');
+    res.sendFile(path.join(__dirname, '../frontend/service-worker.js'));
+});
+
+// Serve manifest at root level
+app.get('/manifest.json', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.sendFile(path.join(__dirname, '../frontend/manifest.json'));
+});
 
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, '../frontend')));

@@ -7,10 +7,18 @@
     <title>Questionnaire | Enquête Patrimoine Marocain</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/survey.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2c5f2d">
 </head>
 
 <body>
     <div class="survey-container">
+        <!-- Online Status Indicator -->
+        <div class="status-bar">
+            <span id="onlineStatus" class="status-online">🟢 En ligne</span>
+            <span id="pendingSync" style="display: none;"></span>
+        </div>
+
         <!-- Progress Bar -->
         <div class="progress-bar-container">
             <div class="progress-bar" id="progressBar"></div>
@@ -93,8 +101,38 @@
         </section>
     </div>
 
+    <!-- Sync Notification -->
+    <div id="syncNotification" class="sync-notification" style="display: none;"></div>
+
     <script src="/js/api-client.js"></script>
+    <script src="/js/offline-manager.js"></script>
     <script src="/js/survey-engine.js"></script>
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => {
+                    console.log('✓ Service Worker registered:', registration.scope);
+                })
+                .catch((error) => {
+                    console.error('✗ Service Worker registration failed:', error);
+                });
+
+            // Listen for messages from Service Worker
+            navigator.serviceWorker.addEventListener('message', (event) => {
+                if (event.data && event.data.type === 'SYNC_RESPONSES') {
+                    offlineManager.syncPendingResponses();
+                }
+            });
+        }
+
+        // Request background sync registration
+        if ('serviceWorker' in navigator && 'sync' in registration) {
+            navigator.serviceWorker.ready.then((registration) => {
+                registration.sync.register('sync-responses').catch(console.error);
+            });
+        }
+    </script>
 </body>
 
 </html>

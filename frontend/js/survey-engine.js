@@ -12,6 +12,7 @@ class SurveyEngine {
         this.responses = {};
         this.startTime = null;
         this.questionTimes = {};
+        this.offlineMode = false;
 
         this.init();
     }
@@ -36,13 +37,31 @@ class SurveyEngine {
         this.showLoading(true);
 
         try {
+            // Try to load from server
             const response = await api.getSurvey(this.surveyCode);
 
-            if (!response.success) {
+            if (response.offline) {
+                // Network failed - try cached version
+                console.log('⚠ Offline - loading cached survey');
+                const cachedSurvey = await offlineManager.getCachedSurvey(this.surveyCode);
+
+                if (cachedSurvey) {
+                    this.surveyData = cachedSurvey;
+                    this.offlineMode = true;
+                    this.showOfflineNotice();
+                } else {
+                    throw new Error('Questionnaire non disponible hors ligne. Veuillez vous connecter.');
+                }
+            } else if (!response.success) {
                 throw new Error(response.message || 'Failed to load survey');
+            } else {
+                this.surveyData = response.survey;
+                this.offlineMode = false;
+
+                // Cache survey for offline use
+                await offlineManager.cacheSurvey(this.surveyCode, this.surveyData);
             }
 
-            this.surveyData = response.survey;
             this.renderSurveyHeader();
             this.renderConsentSection();
 
@@ -152,8 +171,16 @@ class SurveyEngine {
                 true
             );
 
-            if (response.success) {
-                this.respondentUuid = response.respondent_uuid;
+            if (response.success || response.offline) {
+                // Generate offline UUID if needed
+                if (response.offline || this.offlineMode) {
+                    this.respondentUuid = this.generateOfflineUUID();
+                    this.offlineMode = true;
+                    this.showOfflineNotice();
+                } else {
+                    this.respondentUuid = response.respondent_uuid;
+                }
+
                 this.startTime = Date.now();
 
                 // Hide consent, show survey
@@ -163,8 +190,16 @@ class SurveyEngine {
                 this.renderSurvey();
             }
         } catch (error) {
-            this.showError('Erreur lors du démarrage du questionnaire.');
-            console.error(error);
+            // Try offline mode
+            this.respondentUuid = this.generateOfflineUUID();
+            this.offlineMode = true;
+            this.startTime = Date.now();
+
+            document.getElementById('consentSection').style.display = 'none';
+            document.getElementById('surveyContent').style.display = 'block';
+
+            this.renderSurvey();
+            this.showOfflineNotice();
         } finally {
             this.showLoading(false);
         }
@@ -522,14 +557,32 @@ class SurveyEngine {
 
             const responsesArray = Object.values(this.responses);
 
-            await api.saveProgress(
-                this.surveyCode,
-                this.respondentUuid,
-                responsesArray,
-                {}
-            );
+            // Try to save online first
+            try {
+                const response = await api.saveProgress(
+                    this.surveyCode,
+                    this.respondentUuid,
+                    responsesArray,
+                    {}
+                );
 
-            this.showSuccess('Progression sauvegardée avec succès!');
+                if (response.offline || !navigator.onLine) {
+                    throw new Error('Offline');
+                }
+
+                this.showSuccess('Progression sauvegardée avec succès!');
+            } catch (error) {
+                // Save offline
+                await offlineManager.savePendingResponse(
+                    this.surveyCode,
+                    this.respondentUuid,
+                    responsesArray,
+                    {},
+                    false // not complete
+                );
+
+                this.showSuccess('✓ Progression sauvegardée localement (sera synchronisée en ligne)');
+            }
         } catch (error) {
             this.showError('Erreur lors de la sauvegarde.');
             console.error(error);
@@ -556,14 +609,32 @@ class SurveyEngine {
             const responsesArray = Object.values(this.responses);
             const demographics = {}; // Collect demographics if needed
 
-            await api.submitSurvey(
-                this.surveyCode,
-                this.respondentUuid,
-                responsesArray,
-                demographics
-            );
+            // Try to submit online first
+            try {
+                const response = await api.submitSurvey(
+                    this.surveyCode,
+                    this.respondentUuid,
+                    responsesArray,
+                    demographics
+                );
 
-            this.showThankYou();
+                if (response.offline || !navigator.onLine) {
+                    throw new Error('Offline');
+                }
+
+                this.showThankYou();
+            } catch (error) {
+                // Save offline for later sync
+                await offlineManager.savePendingResponse(
+                    this.surveyCode,
+                    this.respondentUuid,
+                    responsesArray,
+                    demographics,
+                    true // complete
+                );
+
+                this.showThankYou(true); // offline mode
+            }
         } catch (error) {
             this.showError('Erreur lors de la soumission. Veuillez réessayer.');
             console.error(error);
@@ -572,7 +643,7 @@ class SurveyEngine {
         }
     }
 
-    showThankYou() {
+    showThankYou(offline = false) {
         const timeTaken = Math.round((Date.now() - this.startTime) / 1000);
         const minutes = Math.floor(timeTaken / 60);
         const seconds = timeTaken % 60;
@@ -581,6 +652,19 @@ class SurveyEngine {
         document.getElementById('thankYouSection').style.display = 'block';
         document.getElementById('completionTime').textContent =
             `Temps écoulé: ${minutes} minutes et ${seconds} secondes`;
+
+        if (offline) {
+            const offlineMessage = document.createElement('div');
+            offlineMessage.className = 'offline-notice';
+            offlineMessage.innerHTML = `
+                <p>📤 Vos réponses ont été sauvegardées localement et seront automatiquement 
+                synchronisées avec le serveur dès que vous aurez une connexion internet.</p>
+            `;
+            document.getElementById('thankYouSection').insertBefore(
+                offlineMessage,
+                document.getElementById('completionTime')
+            );
+        }
     }
 
     updateLanguage() {
@@ -599,6 +683,25 @@ class SurveyEngine {
 
     showSuccess(message) {
         alert('✓ ' + message);
+    }
+
+    generateOfflineUUID() {
+        return 'offline-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    }
+
+    showOfflineNotice() {
+        const notice = document.createElement('div');
+        notice.id = 'offlineNotice';
+        notice.className = 'offline-notice';
+        notice.innerHTML = `
+            <p>⚠️ Mode hors ligne activé. Vos réponses seront synchronisées automatiquement 
+            lorsque vous aurez une connexion internet.</p>
+        `;
+
+        const surveyContent = document.getElementById('surveyContent');
+        if (surveyContent && !document.getElementById('offlineNotice')) {
+            surveyContent.insertBefore(notice, surveyContent.firstChild);
+        }
     }
 }
 
