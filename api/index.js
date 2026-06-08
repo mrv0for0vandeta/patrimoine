@@ -70,6 +70,16 @@ app.get('/survey/:code', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/survey.html'));
 });
 
+// Error handler
+app.use((err, req, res, next) => {
+    console.error('Error:', err);
+    res.status(500).json({
+        success: false,
+        error: err.message,
+        stack: process.env.NODE_ENV === 'development' ? err.stack : undefined
+    });
+});
+
 // Catch all - return index
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/index.html'));
@@ -79,14 +89,29 @@ app.get('*', (req, res) => {
 let initialized = false;
 async function init() {
     if (!initialized) {
-        await dbManager.initialize();
-        initialized = true;
-        console.log('✓ Database initialized');
+        try {
+            console.log('Initializing database...');
+            await dbManager.initialize();
+            initialized = true;
+            console.log('✓ Database initialized');
+        } catch (error) {
+            console.error('✗ Database initialization failed:', error);
+            throw error;
+        }
     }
 }
 
 // Export handler for Vercel
 module.exports = async (req, res) => {
-    await init();
-    return app(req, res);
+    try {
+        await init();
+        return app(req, res);
+    } catch (error) {
+        console.error('Handler error:', error);
+        return res.status(500).json({
+            success: false,
+            error: 'Internal server error',
+            message: error.message
+        });
+    }
 };
