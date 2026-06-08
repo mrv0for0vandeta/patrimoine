@@ -8,7 +8,14 @@ const rateLimit = require('express-rate-limit');
 const path = require('path');
 
 // Import utilities and middleware
-const dbManager = require('./utils/database-sqlite3');
+// Use Neon for Vercel/production with DATABASE_URL, SQLite for local development
+const useNeon = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+const dbManager = useNeon
+    ? require('./utils/database-neon')
+    : require('./utils/database-sqlite3');
+
+console.log(`Using ${useNeon ? 'Neon PostgreSQL' : 'SQLite'} database`);
+
 const { logger, requestLogger } = require('./middleware/logger');
 const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');
 

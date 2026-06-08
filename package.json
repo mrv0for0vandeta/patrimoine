@@ -24,6 +24,8 @@
     "author": "Direction du Patrimoine - Ministère de la Jeunesse, de la Culture et de la Communication",
     "license": "MIT",
     "dependencies": {
+        "@neondatabase/serverless": "^1.1.0",
+        "@vercel/postgres": "^0.10.0",
         "bcrypt": "^6.0.0",
         "bcryptjs": "^2.4.3",
         "compression": "^1.8.1",

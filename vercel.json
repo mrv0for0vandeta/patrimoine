@@ -16,11 +16,21 @@
             "dest": "backend/server.js"
         },
         {
+            "src": "/(.*\\.(css|js|html|png|jpg|jpeg|gif|svg|ico|json))",
+            "dest": "/$1"
+        },
+        {
             "src": "/(.*)",
             "dest": "backend/server.js"
         }
     ],
     "env": {
         "NODE_ENV": "production"
+    },
+    "functions": {
+        "backend/server.js": {
+            "memory": 1024,
+            "maxDuration": 10
+        }
     }
 }
