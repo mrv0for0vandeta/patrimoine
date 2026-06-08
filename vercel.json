@@ -16,8 +16,16 @@
             "dest": "backend/server.js"
         },
         {
-            "src": "/(.*\\.(css|js|html|png|jpg|jpeg|gif|svg|ico|json))",
-            "dest": "/$1"
+            "src": "/admin(.*)",
+            "dest": "backend/server.js"
+        },
+        {
+            "src": "/survey/(.*)",
+            "dest": "backend/server.js"
+        },
+        {
+            "src": "/(.*\\.(css|js|json|png|jpg|jpeg|gif|svg|ico|html))",
+            "dest": "frontend/$1"
         },
         {
             "src": "/(.*)",

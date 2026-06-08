@@ -292,7 +292,14 @@ async function startServer() {
     }
 }
 
-// Start the server
-startServer();
+// Start the server (only in non-serverless environments)
+if (process.env.VERCEL !== '1') {
+    startServer();
+} else {
+    // For Vercel serverless, initialize database but don't start server
+    dbManager.initialize()
+        .then(() => console.log('✓ Database initialized for serverless'))
+        .catch(err => console.error('✗ Database init error:', err));
+}
 
 module.exports = app;
