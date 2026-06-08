@@ -1,0 +1,1624 @@
+{
+    "surveyCode": "Q6_MINISTRY",
+    "sections": [
+        {
+            "title": "SECTION 1 : PROFIL PROFESSIONNEL",
+            "description": "",
+            "order": 1,
+            "questions": [
+                {
+                    "number": 1,
+                    "text": "Âge :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 1,
+                    "options": [
+                        {
+                            "text": "18–30 ans",
+                            "order": 1
+                        },
+                        {
+                            "text": "31–40 ans",
+                            "order": 2
+                        },
+                        {
+                            "text": "41–50 ans",
+                            "order": 3
+                        },
+                        {
+                            "text": "51–60 ans",
+                            "order": 4
+                        },
+                        {
+                            "text": "61 ans ou plus",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Genre :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 2,
+                    "options": [
+                        {
+                            "text": "Femme",
+                            "order": 1
+                        },
+                        {
+                            "text": "Homme",
+                            "order": 2
+                        },
+                        {
+                            "text": "Je préfère ne pas répondre",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "Région d'origine :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 3,
+                    "options": [
+                        {
+                            "text": "Tanger-Tétouan-Al Hoceïma",
+                            "order": 1
+                        },
+                        {
+                            "text": "L'Oriental",
+                            "order": 2
+                        },
+                        {
+                            "text": "Fès-Meknès",
+                            "order": 3
+                        },
+                        {
+                            "text": "Rabat-Salé-Kénitra",
+                            "order": 4
+                        },
+                        {
+                            "text": "Béni Mellal-Khénifra",
+                            "order": 5
+                        },
+                        {
+                            "text": "Casablanca-Settat",
+                            "order": 6
+                        },
+                        {
+                            "text": "Marrakech-Safi",
+                            "order": 7
+                        },
+                        {
+                            "text": "Drâa-Tafilalet",
+                            "order": 8
+                        },
+                        {
+                            "text": "Souss-Massa",
+                            "order": 9
+                        },
+                        {
+                            "text": "Guelmim-Oued Noun",
+                            "order": 10
+                        },
+                        {
+                            "text": "Laâyoune-Sakia El Hamra",
+                            "order": 11
+                        },
+                        {
+                            "text": "Dakhla-Oued Ed-Dahab",
+                            "order": 12
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "text": "Région du lieu de travail :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 4,
+                    "options": [
+                        {
+                            "text": "Tanger-Tétouan-Al Hoceïma",
+                            "order": 1
+                        },
+                        {
+                            "text": "L'Oriental",
+                            "order": 2
+                        },
+                        {
+                            "text": "Fès-Meknès",
+                            "order": 3
+                        },
+                        {
+                            "text": "Rabat-Salé-Kénitra",
+                            "order": 4
+                        },
+                        {
+                            "text": "Béni Mellal-Khénifra",
+                            "order": 5
+                        },
+                        {
+                            "text": "Casablanca-Settat",
+                            "order": 6
+                        },
+                        {
+                            "text": "Marrakech-Safi",
+                            "order": 7
+                        },
+                        {
+                            "text": "Drâa-Tafilalet",
+                            "order": 8
+                        },
+                        {
+                            "text": "Souss-Massa",
+                            "order": 9
+                        },
+                        {
+                            "text": "Guelmim-Oued Noun",
+                            "order": 10
+                        },
+                        {
+                            "text": "Laâyoune-Sakia El Hamra",
+                            "order": 11
+                        },
+                        {
+                            "text": "Dakhla-Oued Ed-Dahab",
+                            "order": 12
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "text": "Département ou direction :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 5,
+                    "options": [
+                        {
+                            "text": "Direction du Patrimoine (niveau central)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Direction régionale de la culture (délégation régionale)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Autre département ou direction du Ministère",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "text": "Niveau de poste :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 6,
+                    "options": [
+                        {
+                            "text": "Personnel administratif (cadre administratif)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Spécialiste technique (cadre technique ou ingénieur)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Expert professionnel (expert ou chargé d'études)",
+                            "order": 3
+                        },
+                        {
+                            "text": "Rôle d'encadrement ou de supervision (chef de service, chef de division, ou équivalent)",
+                            "order": 4
+                        },
+                        {
+                            "text": "Directeur ou cadre supérieur (directeur, secrétaire général, ou équivalent)",
+                            "order": 5
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 6
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "text": "Durée de service au Ministère ou à la Direction du Patrimoine :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 7,
+                    "options": [
+                        {
+                            "text": "Moins de 2 ans",
+                            "order": 1
+                        },
+                        {
+                            "text": "2 à 5 ans",
+                            "order": 2
+                        },
+                        {
+                            "text": "6 à 10 ans",
+                            "order": 3
+                        },
+                        {
+                            "text": "11 à 20 ans",
+                            "order": 4
+                        },
+                        {
+                            "text": "Plus de 20 ans",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 8,
+                    "text": "Responsabilités professionnelles principales (cochez tout ce qui s'applique) :",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 8,
+                    "options": [
+                        {
+                            "text": "Classification du patrimoine et protection juridique",
+                            "order": 1
+                        },
+                        {
+                            "text": "Conservation, restauration ou réhabilitation de monuments ou de sites",
+                            "order": 2
+                        },
+                        {
+                            "text": "Recherche archéologique et fouilles",
+                            "order": 3
+                        },
+                        {
+                            "text": "Documentation et sauvegarde du patrimoine culturel immatériel",
+                            "order": 4
+                        },
+                        {
+                            "text": "Développement et maintenance de l'inventaire national du patrimoine",
+                            "order": 5
+                        },
+                        {
+                            "text": "Coopération internationale et partenariats (UNESCO, ICOMOS, bilatéraux)",
+                            "order": 6
+                        },
+                        {
+                            "text": "Programmes d'éducation au patrimoine et de sensibilisation du public",
+                            "order": 7
+                        },
+                        {
+                            "text": "Gestion du tourisme et des sites patrimoniaux",
+                            "order": 8
+                        },
+                        {
+                            "text": "Gestion administrative et financière",
+                            "order": 9
+                        },
+                        {
+                            "text": "Développement des politiques et affaires juridiques",
+                            "order": 10
+                        },
+                        {
+                            "text": "Communication et relations publiques",
+                            "order": 11
+                        },
+                        {
+                            "text": "Ressources humaines ou formation",
+                            "order": 12
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 13
+                        }
+                    ]
+                },
+                {
+                    "number": 9,
+                    "text": "Avez-vous reçu une formation professionnelle spécifique en gestion ou conservation du patrimoine culturel ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 9,
+                    "options": [
+                        {
+                            "text": "Oui, formation académique formelle (diplôme)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, formation professionnelle ou certification",
+                            "order": 2
+                        },
+                        {
+                            "text": "Formation informelle limitée uniquement",
+                            "order": 3
+                        },
+                        {
+                            "text": "Aucune formation formelle en patrimoine",
+                            "order": 4
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "Vous considérez-vous comme spécialiste du patrimoine culturel ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 10,
+                    "options": [
+                        {
+                            "text": "Spécialiste du patrimoine",
+                            "order": 1
+                        },
+                        {
+                            "text": "Mixte : responsabilités patrimoniales et autres",
+                            "order": 2
+                        },
+                        {
+                            "text": "Principalement des responsabilités non patrimoniales",
+                            "order": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 2 : CONNAISSANCE PROFESSIONNELLE DU PATRIMOINE",
+            "description": "",
+            "order": 2,
+            "questions": [
+                {
+                    "number": 1,
+                    "text": "Comment évalueriez-vous votre niveau actuel de connaissance de la législation marocaine sur le patrimoine culturel (loi 22-80 et réglementations associées) ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 11,
+                    "options": [
+                        {
+                            "text": "Très solide",
+                            "order": 1
+                        },
+                        {
+                            "text": "Solide",
+                            "order": 2
+                        },
+                        {
+                            "text": "Modéré",
+                            "order": 3
+                        },
+                        {
+                            "text": "Limité",
+                            "order": 4
+                        },
+                        {
+                            "text": "Très limité",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Convention du patrimoine mondial de l'UNESCO (1972) (1 = Pas familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 12,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Convention du patrimoine immatériel de l'UNESCO (2003) (1 = Pas familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 13,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Convention sur la diversité culturelle de l'UNESCO (2005) (1 = Pas familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 14,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Chartes de conservation de l'ICOMOS (1 = Pas familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 15,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Indicateurs Culture 2030 de l'UNESCO (1 = Pas familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 16,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Approche du patrimoine vivant de l'ICCROM (1 = Pas familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 17,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "Selon vous, quels éléments du patrimoine culturel marocain sont actuellement les plus menacés ? Sélectionnez jusqu'à 3.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 18,
+                    "options": [
+                        {
+                            "text": "Architecture en terre dans les régions du sud (ksour, kasbahs)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Médinas historiques et tissu urbain dans les grandes villes",
+                            "order": 2
+                        },
+                        {
+                            "text": "Traditions du patrimoine culturel immatériel (musique, artisanat, traditions orales, cérémonies)",
+                            "order": 3
+                        },
+                        {
+                            "text": "Sites archéologiques et objets archéologiques mobiliers",
+                            "order": 4
+                        },
+                        {
+                            "text": "Paysages patrimoniaux ruraux et agricoles",
+                            "order": 5
+                        },
+                        {
+                            "text": "Patrimoine côtier et sous-marin",
+                            "order": 6
+                        },
+                        {
+                            "text": "Patrimoine documentaire et archivistique",
+                            "order": 7
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 8
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "text": "Selon vous, quelles sont les menaces les plus importantes pour le patrimoine culturel du Maroc ? Sélectionnez jusqu'à 3.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 19,
+                    "options": [
+                        {
+                            "text": "Pression du développement urbain et constructions non autorisées",
+                            "order": 1
+                        },
+                        {
+                            "text": "Financement public insuffisant pour la conservation et la restauration",
+                            "order": 2
+                        },
+                        {
+                            "text": "Capacités techniques limitées et manque d'expertise spécialisée",
+                            "order": 3
+                        },
+                        {
+                            "text": "Changement climatique et dégradation environnementale",
+                            "order": 4
+                        },
+                        {
+                            "text": "Pressions touristiques sur les sites à forte fréquentation",
+                            "order": 5
+                        },
+                        {
+                            "text": "Dépopulation rurale et perte des communautés patrimoniales vivantes",
+                            "order": 6
+                        },
+                        {
+                            "text": "Sensibilisation du public et engagement communautaire limités",
+                            "order": 7
+                        },
+                        {
+                            "text": "Faiblesses dans l'application de la loi",
+                            "order": 8
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 9
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 3 : ATTACHEMENT PERSONNEL AU PATRIMOINE",
+            "description": "Échelle : 1 = Tout à fait en désaccord ; 5 = Tout à fait d'accord",
+            "order": 3,
+            "questions": [
+                {
+                    "number": 17,
+                    "text": "Le patrimoine culturel marocain est au cœur de mon identité personnelle. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 20,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "Je ressens une grande fierté et un sens du devoir à protéger le patrimoine marocain. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 21,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "Mon travail professionnel a approfondi mon attachement personnel au patrimoine marocain. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 22,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "Je suis affecté(e) émotionnellement lorsque je constate la dégradation d'un patrimoine. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 23,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 4 : AUTO-ÉVALUATION INSTITUTIONNELLE",
+            "description": "",
+            "order": 4,
+            "questions": [
+                {
+                    "number": 9,
+                    "text": "Globalement, comment évalueriez-vous l'efficacité de la Direction du Patrimoine dans l'accomplissement de ses attributions ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 24,
+                    "options": [
+                        {
+                            "text": "Très efficace",
+                            "order": 1
+                        },
+                        {
+                            "text": "Efficace",
+                            "order": 2
+                        },
+                        {
+                            "text": "Assez efficace",
+                            "order": 3
+                        },
+                        {
+                            "text": "Peu efficace",
+                            "order": 4
+                        },
+                        {
+                            "text": "Inefficace",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "La Direction du Patrimoine dispose de ressources humaines suffisantes. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 25,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "La Direction du Patrimoine dispose de ressources financières suffisantes. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 26,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "La Direction du Patrimoine a accès à l'expertise technique nécessaire. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 27,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "La Direction du Patrimoine communique efficacement avec le public. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 28,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "La Direction du Patrimoine s'engage de manière significative avec les communautés. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 29,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "La coordination inter-institutionnelle est efficace. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 30,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "La Direction du Patrimoine utilise efficacement les outils numériques. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 31,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "L'investissement patrimonial est équitablement réparti entre toutes les régions. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 32,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "Les programmes de sensibilisation atteignent efficacement des publics diversifiés. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 33,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 11,
+                    "text": "Quelles sont les trois réalisations les plus importantes de la Direction du Patrimoine ces dernières années ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 34,
+                    "options": []
+                },
+                {
+                    "number": 12,
+                    "text": "Quels sont les trois défis ou points faibles les plus importants auxquels fait actuellement face la Direction du Patrimoine ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 35,
+                    "options": []
+                }
+            ]
+        },
+        {
+            "title": "SECTION 5 : ENGAGEMENT PUBLIC ET SENSIBILISATION",
+            "description": "",
+            "order": 5,
+            "questions": [
+                {
+                    "number": 13,
+                    "text": "Enfants et élèves (1 = Très inefficacement ; 5 = Très efficacement)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 36,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 13,
+                    "text": "Jeunes et étudiants universitaires (1 = Très inefficacement ; 5 = Très efficacement)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 37,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 13,
+                    "text": "Grand public adulte (1 = Très inefficacement ; 5 = Très efficacement)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 38,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 13,
+                    "text": "Communautés rurales (1 = Très inefficacement ; 5 = Très efficacement)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 39,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 13,
+                    "text": "Professionnels du patrimoine et chercheurs (1 = Très inefficacement ; 5 = Très efficacement)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 40,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 13,
+                    "text": "Organisations de la société civile (1 = Très inefficacement ; 5 = Très efficacement)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 41,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 13,
+                    "text": "Partenaires internationaux (1 = Très inefficacement ; 5 = Très efficacement)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 42,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 14,
+                    "text": "Quels sont les canaux les plus efficaces pour que la Direction du Patrimoine communique avec le public ? Sélectionnez jusqu'à 3.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 43,
+                    "options": [
+                        {
+                            "text": "Réseaux sociaux (Instagram, Facebook, YouTube, TikTok)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Site officiel",
+                            "order": 2
+                        },
+                        {
+                            "text": "Télévision et radio",
+                            "order": 3
+                        },
+                        {
+                            "text": "Presse écrite",
+                            "order": 4
+                        },
+                        {
+                            "text": "Programmes scolaires et partenariats éducatifs",
+                            "order": 5
+                        },
+                        {
+                            "text": "Interprétation de sites patrimoniaux et programmes pour les visiteurs",
+                            "order": 6
+                        },
+                        {
+                            "text": "Événements communautaires, expositions et campagnes de sensibilisation",
+                            "order": 7
+                        },
+                        {
+                            "text": "Applications mobiles",
+                            "order": 8
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 9
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 6 : ENGAGEMENT CIVIQUE ET ÉTHIQUE PROFESSIONNELLE",
+            "description": "",
+            "order": 6,
+            "questions": [
+                {
+                    "number": 15,
+                    "text": "Au-delà de vos responsabilités professionnelles formelles, prenez-vous personnellement des mesures pour préserver ou promouvoir le patrimoine culturel marocain dans votre vie privée ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 44,
+                    "options": [
+                        {
+                            "text": "Oui, fréquemment",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, occasionnellement",
+                            "order": 2
+                        },
+                        {
+                            "text": "Rarement",
+                            "order": 3
+                        },
+                        {
+                            "text": "Non, mon engagement est principalement professionnel",
+                            "order": 4
+                        }
+                    ]
+                },
+                {
+                    "number": 16,
+                    "text": "Selon vous, quel rôle les citoyens marocains devraient-ils jouer dans la préservation du patrimoine, au-delà de l'appréciation passive et des visites de sites ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 45,
+                    "options": []
+                },
+                {
+                    "number": 17,
+                    "text": "Quels obstacles observez-vous qui empêchent les citoyens marocains de s'engager plus activement dans la préservation du patrimoine ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 46,
+                    "options": []
+                }
+            ]
+        },
+        {
+            "title": "SECTION 7 : DÉVELOPPEMENT PROFESSIONNEL ET BESOINS EN FORMATION",
+            "description": "",
+            "order": 7,
+            "questions": [
+                {
+                    "number": 18,
+                    "text": "J'ai reçu une formation professionnelle suffisante pour mes responsabilités actuelles. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 47,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 18,
+                    "text": "Il existe des opportunités adéquates de développement professionnel au Ministère. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 48,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 18,
+                    "text": "Le Ministère investit suffisamment dans le renforcement de l'expertise du personnel. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 49,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 18,
+                    "text": "J'ai un accès adéquat aux réseaux professionnels et à l'expertise internationale. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 50,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 19,
+                    "text": "Dans quels domaines de compétence vous ou votre équipe avez-vous le plus besoin de formation ? Sélectionnez jusqu'à 3.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 51,
+                    "options": [
+                        {
+                            "text": "Science de la conservation et méthodes de restauration technique",
+                            "order": 1
+                        },
+                        {
+                            "text": "Méthodes de documentation et de sauvegarde du patrimoine immatériel",
+                            "order": 2
+                        },
+                        {
+                            "text": "Gestion des sites patrimoniaux et conception de l'expérience des visiteurs",
+                            "order": 3
+                        },
+                        {
+                            "text": "Technologies du patrimoine numérique (SIG, numérisation 3D, archives numériques)",
+                            "order": 4
+                        },
+                        {
+                            "text": "Communication patrimoniale et engagement public",
+                            "order": 5
+                        },
+                        {
+                            "text": "Droit du patrimoine et application de la loi",
+                            "order": 6
+                        },
+                        {
+                            "text": "Conventions internationales et procédures UNESCO",
+                            "order": 7
+                        },
+                        {
+                            "text": "Gestion de projet, suivi et évaluation",
+                            "order": 8
+                        },
+                        {
+                            "text": "Engagement communautaire et approches participatives du patrimoine",
+                            "order": 9
+                        },
+                        {
+                            "text": "Collecte de fonds et financement du patrimoine",
+                            "order": 10
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 8 : RECOMMANDATIONS ET VISION D'AVENIR",
+            "description": "",
+            "order": 8,
+            "questions": [
+                {
+                    "number": 20,
+                    "text": "Quelles sont les trois actions les plus importantes que la Direction du Patrimoine devrait prioriser au cours des 3 à 5 prochaines années ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 52,
+                    "options": []
+                },
+                {
+                    "number": 21,
+                    "text": "Quels changements de politique ou de législation renforceraient le plus la préservation du patrimoine au Maroc ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 53,
+                    "options": []
+                },
+                {
+                    "number": 22,
+                    "text": "Quel rôle les technologies numériques devraient-elles jouer dans la stratégie de préservation du patrimoine du Maroc au cours de la prochaine décennie ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 54,
+                    "options": []
+                },
+                {
+                    "number": 23,
+                    "text": "Qu'est-ce qui améliorerait le plus votre capacité à remplir vos responsabilités professionnelles liées à la préservation du patrimoine ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 55,
+                    "options": []
+                },
+                {
+                    "number": 24,
+                    "text": "Avez-vous des commentaires, observations ou recommandations supplémentaires ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 56,
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

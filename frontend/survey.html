@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire | Enquête Patrimoine Marocain</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/survey.css">
+</head>
+
+<body>
+    <div class="survey-container">
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <div class="progress-text" id="progressText">0%</div>
+        </div>
+
+        <!-- Survey Header -->
+        <header class="survey-header">
+            <h1 id="surveyTitle">Chargement...</h1>
+            <p class="survey-meta">
+                <span id="targetAudience"></span>
+                <span id="estimatedDuration"></span>
+            </p>
+        </header>
+
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <label>Langue / اللغة / Language:</label>
+            <select id="languageSelect">
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+
+        <!-- Consent Section -->
+        <section id="consentSection" class="consent-section" style="display: none;">
+            <h2>Consentement / الموافقة / Consent</h2>
+            <div id="consentText"></div>
+            <label class="consent-checkbox">
+                <input type="checkbox" id="consentCheckbox">
+                <span>J'accepte de participer volontairement à cette enquête</span>
+            </label>
+            <button id="startSurveyBtn" class="btn btn-primary" disabled>Commencer / ابدأ / Start</button>
+        </section>
+
+        <!-- Survey Content -->
+        <div id="surveyContent" style="display: none;">
+            <!-- Introduction -->
+            <section id="introductionSection" class="survey-section">
+                <div id="introductionText"></div>
+                <div id="instructionsText"></div>
+            </section>
+
+            <!-- Survey Sections and Questions -->
+            <form id="surveyForm">
+                <div id="sectionsContainer"></div>
+
+                <!-- Navigation Buttons -->
+                <div class="survey-navigation">
+                    <button type="button" id="saveProgressBtn" class="btn btn-secondary">
+                        Sauvegarder / حفظ / Save Progress
+                    </button>
+                    <button type="submit" id="submitSurveyBtn" class="btn btn-primary">
+                        Soumettre / إرسال / Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading-indicator">
+            <div class="spinner"></div>
+            <p>Chargement...</p>
+        </div>
+
+        <!-- Thank You Page -->
+        <section id="thankYouSection" class="thank-you-section" style="display: none;">
+            <div class="thank-you-content">
+                <h2>✓ Merci pour votre participation!</h2>
+                <h3 dir="rtl">✓ شكراً لمشاركتك!</h3>
+                <h3>✓ Thank you for your participation!</h3>
+                <p>
+                    Vos réponses ont été enregistrées avec succès. Elles contribueront à mieux comprendre
+                    et préserver le patrimoine culturel marocain.
+                </p>
+                <p id="completionTime"></p>
+                <a href="/" class="btn btn-primary">Retour à l'accueil / العودة للصفحة الرئيسية / Back to Home</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="/js/api-client.js"></script>
+    <script src="/js/survey-engine.js"></script>
+</body>
+
+</html>

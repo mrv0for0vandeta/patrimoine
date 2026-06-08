@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Patrimoine Survey Platform</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body class="admin-body">
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Administration</h1>
+                <p>Enquête Nationale sur le Patrimoine Culturel Marocain</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur / Username</label>
+                    <input type="text" id="username" name="username" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe / Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div id="loginError" class="error-message" style="display: none;"></div>
+                <button type="submit" class="btn btn-primary btn-block">Se connecter / Login</button>
+            </form>
+            <div class="login-footer">
+                <a href="/">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="dashboardScreen" class="dashboard-container" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+                <p id="currentUser"></p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" data-page="dashboard" class="nav-item active">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a href="#" data-page="surveys" class="nav-item">
+                    <span class="icon">📋</span> Surveys
+                </a>
+                <a href="#" data-page="analytics" class="nav-item">
+                    <span class="icon">📈</span> Analytics
+                </a>
+                <a href="#" data-page="export" class="nav-item">
+                    <span class="icon">💾</span> Export Data
+                </a>
+                <a href="#" data-page="respondents" class="nav-item">
+                    <span class="icon">👥</span> Respondents
+                </a>
+                <a href="#" data-page="users" class="nav-item">
+                    <span class="icon">👤</span> Users
+                </a>
+                <a href="#" data-page="system" class="nav-item">
+                    <span class="icon">⚙️</span> System
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary btn-block">Déconnexion / Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="pageContent">
+                <!-- Dashboard Overview -->
+                <div id="dashboardPage" class="page-content active">
+                    <h1>Dashboard Overview</h1>
+
+                    <div class="stats-grid" id="statsGrid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalSurveys">-</div>
+                            <div class="stat-label">Total Surveys</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalResponses">-</div>
+                            <div class="stat-label">Total Responses</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="completedResponses">-</div>
+                            <div class="stat-label">Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="completionRate">-</div>
+                            <div class="stat-label">Completion Rate</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-section">
+                        <h2>Recent Activity</h2>
+                        <div id="recentActivity">Loading...</div>
+                    </div>
+
+                    <div class="dashboard-section">
+                        <h2>Top Performing Surveys</h2>
+                        <div id="topSurveys">Loading...</div>
+                    </div>
+                </div>
+
+                <!-- Other pages will be loaded dynamically -->
+                <div id="surveysPage" class="page-content" style="display: none;">
+                    <h1>Survey Management</h1>
+                    <p>Survey list and management tools will be displayed here.</p>
+                </div>
+
+                <div id="analyticsPage" class="page-content" style="display: none;">
+                    <h1>Analytics</h1>
+                    <p>Analytics and visualizations will be displayed here.</p>
+                </div>
+
+                <div id="exportPage" class="page-content" style="display: none;">
+                    <h1>Data Export</h1>
+                    <p>Data export tools will be displayed here.</p>
+                </div>
+
+                <div id="respondentsPage" class="page-content" style="display: none;">
+                    <h1>Respondents</h1>
+                    <p>Respondent management will be displayed here.</p>
+                </div>
+
+                <div id="usersPage" class="page-content" style="display: none;">
+                    <h1>User Management</h1>
+                    <p>User management tools will be displayed here.</p>
+                </div>
+
+                <div id="systemPage" class="page-content" style="display: none;">
+                    <h1>System Settings</h1>
+                    <p>System configuration and maintenance tools will be displayed here.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/api-client.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>

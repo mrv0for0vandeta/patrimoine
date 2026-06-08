@@ -1,0 +1,201 @@
+{
+    "surveyCode": "Q1_PRIMARY",
+    "instructions": "This is a template for manual survey import. Copy exact questions from DOCX file.",
+    "sections": [
+        {
+            "title": "Section I: Données Démographiques",
+            "description": "Questions sur les informations personnelles et démographiques",
+            "order": 1,
+            "questions": [
+                {
+                    "number": 1,
+                    "text": "Quel est votre âge?",
+                    "type": "text",
+                    "required": true,
+                    "order": 1,
+                    "options": []
+                },
+                {
+                    "number": 2,
+                    "text": "Quel est votre genre?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 2,
+                    "options": [
+                        {
+                            "text": "Masculin",
+                            "order": 1
+                        },
+                        {
+                            "text": "Féminin",
+                            "order": 2
+                        },
+                        {
+                            "text": "Préfère ne pas répondre",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "Dans quelle région habitez-vous?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 3,
+                    "options": [
+                        {
+                            "text": "Tanger-Tétouan-Al Hoceïma",
+                            "order": 1
+                        },
+                        {
+                            "text": "L'Oriental",
+                            "order": 2
+                        },
+                        {
+                            "text": "Fès-Meknès",
+                            "order": 3
+                        },
+                        {
+                            "text": "Rabat-Salé-Kénitra",
+                            "order": 4
+                        },
+                        {
+                            "text": "Béni Mellal-Khénifra",
+                            "order": 5
+                        },
+                        {
+                            "text": "Casablanca-Settat",
+                            "order": 6
+                        },
+                        {
+                            "text": "Marrakech-Safi",
+                            "order": 7
+                        },
+                        {
+                            "text": "Drâa-Tafilalet",
+                            "order": 8
+                        },
+                        {
+                            "text": "Souss-Massa",
+                            "order": 9
+                        },
+                        {
+                            "text": "Guelmim-Oued Noun",
+                            "order": 10
+                        },
+                        {
+                            "text": "Laâyoune-Sakia El Hamra",
+                            "order": 11
+                        },
+                        {
+                            "text": "Dakhla-Oued Ed-Dahab",
+                            "order": 12
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Section II: Connaissance du Patrimoine",
+            "description": "Questions sur votre connaissance du patrimoine culturel marocain",
+            "order": 2,
+            "questions": [
+                {
+                    "number": 4,
+                    "text": "Connaissez-vous le terme 'patrimoine culturel'?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 4,
+                    "options": [
+                        {
+                            "text": "Oui, très bien",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, un peu",
+                            "order": 2
+                        },
+                        {
+                            "text": "Non, pas du tout",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "text": "Comment évaluez-vous votre connaissance du patrimoine marocain?",
+                    "type": "likert",
+                    "required": true,
+                    "order": 5,
+                    "options": [
+                        {
+                            "text": "1 - Très faible",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5 - Très bonne",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "text": "Quels types de patrimoine culturel connaissez-vous? (Plusieurs réponses possibles)",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 6,
+                    "options": [
+                        {
+                            "text": "Patrimoine architectural (médinas, kasbahs)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Patrimoine artisanal (poterie, tissage)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Patrimoine immatériel (musique, traditions)",
+                            "order": 3
+                        },
+                        {
+                            "text": "Patrimoine naturel (parcs, sites naturels)",
+                            "order": 4
+                        },
+                        {
+                            "text": "Patrimoine archéologique (sites historiques)",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "text": "Pouvez-vous nommer un site de patrimoine que vous avez visité?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 7,
+                    "options": []
+                }
+            ]
+        }
+    ],
+    "notes": [
+        "Question types available: text, textarea, radio, checkbox, likert, dropdown",
+        "All text must be copied EXACTLY from DOCX file - no modifications",
+        "Preserve question numbering exactly as in source",
+        "Preserve option order exactly as in source",
+        "Set required to true for mandatory questions",
+        "order field determines display sequence"
+    ]
+}

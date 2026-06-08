@@ -1,0 +1,1590 @@
+{
+    "surveyCode": "Q5_PUBLIC",
+    "sections": [
+        {
+            "title": "SECTION 1 : PROFIL DÉMOGRAPHIQUE",
+            "description": "",
+            "order": 1,
+            "questions": [
+                {
+                    "number": 1,
+                    "text": "Âge :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 1,
+                    "options": [
+                        {
+                            "text": "18–24 ans",
+                            "order": 1
+                        },
+                        {
+                            "text": "25–34 ans",
+                            "order": 2
+                        },
+                        {
+                            "text": "35–44 ans",
+                            "order": 3
+                        },
+                        {
+                            "text": "45–54 ans",
+                            "order": 4
+                        },
+                        {
+                            "text": "55–64 ans",
+                            "order": 5
+                        },
+                        {
+                            "text": "65 ans ou plus",
+                            "order": 6
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Genre :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 2,
+                    "options": [
+                        {
+                            "text": "Femme",
+                            "order": 1
+                        },
+                        {
+                            "text": "Homme",
+                            "order": 2
+                        },
+                        {
+                            "text": "Je préfère ne pas répondre",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "Région d'origine :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 3,
+                    "options": [
+                        {
+                            "text": "Tanger-Tétouan-Al Hoceïma",
+                            "order": 1
+                        },
+                        {
+                            "text": "L'Oriental",
+                            "order": 2
+                        },
+                        {
+                            "text": "Fès-Meknès",
+                            "order": 3
+                        },
+                        {
+                            "text": "Rabat-Salé-Kénitra",
+                            "order": 4
+                        },
+                        {
+                            "text": "Béni Mellal-Khénifra",
+                            "order": 5
+                        },
+                        {
+                            "text": "Casablanca-Settat",
+                            "order": 6
+                        },
+                        {
+                            "text": "Marrakech-Safi",
+                            "order": 7
+                        },
+                        {
+                            "text": "Drâa-Tafilalet",
+                            "order": 8
+                        },
+                        {
+                            "text": "Souss-Massa",
+                            "order": 9
+                        },
+                        {
+                            "text": "Guelmim-Oued Noun",
+                            "order": 10
+                        },
+                        {
+                            "text": "Laâyoune-Sakia El Hamra",
+                            "order": 11
+                        },
+                        {
+                            "text": "Dakhla-Oued Ed-Dahab",
+                            "order": 12
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "text": "Région de résidence :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 4,
+                    "options": [
+                        {
+                            "text": "Tanger-Tétouan-Al Hoceïma",
+                            "order": 1
+                        },
+                        {
+                            "text": "L'Oriental",
+                            "order": 2
+                        },
+                        {
+                            "text": "Fès-Meknès",
+                            "order": 3
+                        },
+                        {
+                            "text": "Rabat-Salé-Kénitra",
+                            "order": 4
+                        },
+                        {
+                            "text": "Béni Mellal-Khénifra",
+                            "order": 5
+                        },
+                        {
+                            "text": "Casablanca-Settat",
+                            "order": 6
+                        },
+                        {
+                            "text": "Marrakech-Safi",
+                            "order": 7
+                        },
+                        {
+                            "text": "Drâa-Tafilalet",
+                            "order": 8
+                        },
+                        {
+                            "text": "Souss-Massa",
+                            "order": 9
+                        },
+                        {
+                            "text": "Guelmim-Oued Noun",
+                            "order": 10
+                        },
+                        {
+                            "text": "Laâyoune-Sakia El Hamra",
+                            "order": 11
+                        },
+                        {
+                            "text": "Dakhla-Oued Ed-Dahab",
+                            "order": 12
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "text": "Province ou préfecture de résidence (facultatif) :",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 5,
+                    "options": []
+                },
+                {
+                    "number": 6,
+                    "text": "Catégorie urbaine/rurale :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 6,
+                    "options": [
+                        {
+                            "text": "Urbain",
+                            "order": 1
+                        },
+                        {
+                            "text": "Périurbain",
+                            "order": 2
+                        },
+                        {
+                            "text": "Rural",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "text": "Niveau d'instruction le plus élevé :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 7,
+                    "options": [
+                        {
+                            "text": "Aucune scolarisation",
+                            "order": 1
+                        },
+                        {
+                            "text": "École primaire (complète ou incomplète)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Collège",
+                            "order": 3
+                        },
+                        {
+                            "text": "Lycée",
+                            "order": 4
+                        },
+                        {
+                            "text": "Formation professionnelle ou technique",
+                            "order": 5
+                        },
+                        {
+                            "text": "Licence ou équivalent",
+                            "order": 6
+                        },
+                        {
+                            "text": "Master ou niveau supérieur",
+                            "order": 7
+                        }
+                    ]
+                },
+                {
+                    "number": 8,
+                    "text": "Situation professionnelle actuelle :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 8,
+                    "options": [
+                        {
+                            "text": "Salarié(e) à temps plein",
+                            "order": 1
+                        },
+                        {
+                            "text": "Salarié(e) à temps partiel ou de façon intermittente",
+                            "order": 2
+                        },
+                        {
+                            "text": "Indépendant(e) / travailleur(se) autonome",
+                            "order": 3
+                        },
+                        {
+                            "text": "Étudiant(e)",
+                            "order": 4
+                        },
+                        {
+                            "text": "Femme/homme au foyer",
+                            "order": 5
+                        },
+                        {
+                            "text": "Retraité(e)",
+                            "order": 6
+                        },
+                        {
+                            "text": "Sans emploi",
+                            "order": 7
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 8
+                        }
+                    ]
+                },
+                {
+                    "number": 9,
+                    "text": "Secteur d'activité (si employé ou indépendant) :",
+                    "type": "radio",
+                    "required": false,
+                    "order": 9,
+                    "options": [
+                        {
+                            "text": "Secteur public (gouvernement, éducation, santé)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Secteur privé",
+                            "order": 2
+                        },
+                        {
+                            "text": "Agriculture, pêche ou sylviculture",
+                            "order": 3
+                        },
+                        {
+                            "text": "Artisanat ou secteur des métiers traditionnels",
+                            "order": 4
+                        },
+                        {
+                            "text": "Tourisme ou hôtellerie",
+                            "order": 5
+                        },
+                        {
+                            "text": "Industries culturelles ou créatives",
+                            "order": 6
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 7
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "Appartenez-vous à une association qui opère dans le secteur de la culture ou du civisme ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 10,
+                    "options": [
+                        {
+                            "text": "Oui",
+                            "order": 1
+                        },
+                        {
+                            "text": "Non",
+                            "order": 2
+                        }
+                    ]
+                },
+                {
+                    "number": 11,
+                    "text": "Avez-vous déjà participé à une activité bénévole liée au patrimoine ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 11,
+                    "options": [
+                        {
+                            "text": "Oui",
+                            "order": 1
+                        },
+                        {
+                            "text": "Non",
+                            "order": 2
+                        }
+                    ]
+                },
+                {
+                    "number": 12,
+                    "text": "Votre langue principale à la maison est :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 12,
+                    "options": [
+                        {
+                            "text": "Darija (arabe marocain)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Tamazight (langues amazighes)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Arabe standard",
+                            "order": 3
+                        },
+                        {
+                            "text": "Français",
+                            "order": 4
+                        },
+                        {
+                            "text": "Hassaniya",
+                            "order": 5
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 6
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 2 : CONNAISSANCE ET SENSIBILISATION AU PATRIMOINE",
+            "description": "",
+            "order": 2,
+            "questions": [
+                {
+                    "number": 1,
+                    "text": "En vos propres mots, que signifie pour vous le « patrimoine culturel » ? (Rédigez 2 à 3 phrases)",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 13,
+                    "options": []
+                },
+                {
+                    "number": 2,
+                    "text": "Médinas historiques (Fès, Marrakech, Tétouan, etc.) (1 = Pas du tout familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 14,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Sites archéologiques marocains (Volubilis, Lixus, Sala, etc.) (1 = Pas du tout familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 15,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Artisanat marocain traditionnel (poterie, tissage, cuir, zellige) (1 = Pas du tout familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 16,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Musique marocaine traditionnelle (Gnawa, Andalouse, Aissawa, Ahwach) (1 = Pas du tout familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 17,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Traditions culturelles et langue amazighes (1 = Pas du tout familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 18,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Fêtes traditionnelles et célébrations religieuses (1 = Pas du tout familier ; 5 = Très familier)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 19,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "Quelles sources utilisez-vous le plus pour vous informer sur le patrimoine culturel marocain ? Sélectionnez jusqu'à 3.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 20,
+                    "options": [
+                        {
+                            "text": "Télévision (documentaires, actualités, émissions culturelles)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Radio",
+                            "order": 2
+                        },
+                        {
+                            "text": "Journaux ou magazines",
+                            "order": 3
+                        },
+                        {
+                            "text": "Réseaux sociaux (Facebook, Instagram, YouTube, TikTok)",
+                            "order": 4
+                        },
+                        {
+                            "text": "Famille, amis et réseaux communautaires",
+                            "order": 5
+                        },
+                        {
+                            "text": "Visites personnelles de sites patrimoniaux ou de musées",
+                            "order": 6
+                        },
+                        {
+                            "text": "Enseignement scolaire ou universitaire",
+                            "order": 7
+                        },
+                        {
+                            "text": "Livres, revues ou autres imprimés",
+                            "order": 8
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 9
+                        },
+                        {
+                            "text": "Je ne cherche pas d'informations sur le patrimoine",
+                            "order": 10
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "text": "Aviez-vous déjà entendu parler de la Direction du Patrimoine ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 21,
+                    "options": [
+                        {
+                            "text": "Oui, et je sais ce qu'elle fait",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, mais je ne sais pas exactement ce qu'elle fait",
+                            "order": 2
+                        },
+                        {
+                            "text": "Non",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "text": "(Si oui) Quand et par quelle source avez-vous entendu parler pour la première fois de la Direction du Patrimoine ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 22,
+                    "options": []
+                }
+            ]
+        },
+        {
+            "title": "SECTION 3 : EXPÉRIENCE ET INTERACTION AVEC LE PATRIMOINE",
+            "description": "",
+            "order": 3,
+            "questions": [
+                {
+                    "number": 6,
+                    "text": "Au cours de l'année dernière, à quelle fréquence avez-vous visité un site patrimonial, un musée ou une institution culturelle ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 23,
+                    "options": [
+                        {
+                            "text": "Jamais",
+                            "order": 1
+                        },
+                        {
+                            "text": "Une fois",
+                            "order": 2
+                        },
+                        {
+                            "text": "2 à 3 fois",
+                            "order": 3
+                        },
+                        {
+                            "text": "4 fois ou plus",
+                            "order": 4
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "text": "Quels types de sites patrimoniaux ou de lieux culturels avez-vous visités au cours des 3 dernières années ? Cochez tout ce qui s'applique.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 24,
+                    "options": [
+                        {
+                            "text": "Un site du patrimoine mondial de l'UNESCO au Maroc",
+                            "order": 1
+                        },
+                        {
+                            "text": "Un autre site historique, médina ou monument au Maroc",
+                            "order": 2
+                        },
+                        {
+                            "text": "Un site archéologique",
+                            "order": 3
+                        },
+                        {
+                            "text": "Un musée national ou régional",
+                            "order": 4
+                        },
+                        {
+                            "text": "Un centre culturel ou une exposition patrimoniale",
+                            "order": 5
+                        },
+                        {
+                            "text": "Je n'ai visité aucun site patrimonial ou lieu culturel au cours des 3 dernières années",
+                            "order": 6
+                        }
+                    ]
+                },
+                {
+                    "number": 8,
+                    "text": "Au cours de l'année dernière, avez-vous participé à l'une des activités culturelles suivantes ? Cochez tout ce qui s'applique.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 25,
+                    "options": [
+                        {
+                            "text": "Un festival traditionnel, un Moussem ou une célébration régionale",
+                            "order": 1
+                        },
+                        {
+                            "text": "Un spectacle de musique traditionnelle (Gnawa, Andalouse, Ahwach, Aissawa, etc.)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Une activité artisanale, culinaire ou de pratique culturelle traditionnelle",
+                            "order": 3
+                        },
+                        {
+                            "text": "Un conte, une poésie orale ou une représentation orale traditionnelle",
+                            "order": 4
+                        },
+                        {
+                            "text": "Un événement de sensibilisation au patrimoine, une exposition ou une campagne",
+                            "order": 5
+                        },
+                        {
+                            "text": "Aucune de ces activités",
+                            "order": 6
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 4 : ATTACHEMENT ÉMOTIONNEL ET IDENTITÉ CULTURELLE",
+            "description": "Échelle : 1 = Tout à fait en désaccord ; 5 = Tout à fait d'accord",
+            "order": 4,
+            "questions": [
+                {
+                    "number": 9,
+                    "text": "Le patrimoine culturel marocain est une partie importante de mon identité. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 26,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 9,
+                    "text": "Je suis fier(ère) de la richesse et de la diversité du patrimoine culturel du Maroc. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 27,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 9,
+                    "text": "Le patrimoine culturel marocain me relie à ma famille, mes ancêtres et ma communauté. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 28,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 9,
+                    "text": "Je me sens plus attaché(e) au patrimoine de ma région qu'au patrimoine national en général. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 29,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 9,
+                    "text": "Quand j'apprends qu'un site ou une tradition est menacé(e), je ressens une vraie détresse. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 30,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 9,
+                    "text": "Voir le patrimoine marocain préservé me rend optimiste pour l'avenir du Maroc. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 31,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 5 : ATTITUDES ENVERS LA PRÉSERVATION DU PATRIMOINE",
+            "description": "",
+            "order": 5,
+            "questions": [
+                {
+                    "number": 15,
+                    "text": "Dans quelle mesure considérez-vous importante la préservation du patrimoine culturel marocain ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 32,
+                    "options": [
+                        {
+                            "text": "Pas du tout important",
+                            "order": 1
+                        },
+                        {
+                            "text": "Peu important",
+                            "order": 2
+                        },
+                        {
+                            "text": "Modérément important",
+                            "order": 3
+                        },
+                        {
+                            "text": "Très important",
+                            "order": 4
+                        },
+                        {
+                            "text": "Extrêmement important",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 16,
+                    "text": "Qui porte, selon vous, la responsabilité principale de la préservation du patrimoine culturel du Maroc ? Sélectionnez jusqu'à 2.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 33,
+                    "options": [
+                        {
+                            "text": "L'État",
+                            "order": 1
+                        },
+                        {
+                            "text": "Les gouvernements locaux et autorités municipales",
+                            "order": 2
+                        },
+                        {
+                            "text": "Les établissements scolaires et éducatifs",
+                            "order": 3
+                        },
+                        {
+                            "text": "Les organisations de la société civile et associations",
+                            "order": 4
+                        },
+                        {
+                            "text": "Les citoyens et les familles",
+                            "order": 5
+                        },
+                        {
+                            "text": "Les institutions religieuses",
+                            "order": 6
+                        },
+                        {
+                            "text": "Le secteur du tourisme et le secteur privé",
+                            "order": 7
+                        },
+                        {
+                            "text": "La communauté internationale (UNESCO, gouvernements étrangers)",
+                            "order": 8
+                        },
+                        {
+                            "text": "Tout le monde partage une responsabilité égale",
+                            "order": 9
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "La préservation du patrimoine est essentielle à l'identité nationale du Maroc. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 34,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "La préservation du patrimoine contribue au développement économique du Maroc. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 35,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "Le développement urbain moderne menace le patrimoine du Maroc. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 36,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "L'État devrait investir davantage dans la préservation du patrimoine. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 37,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 17,
+                    "text": "Chaque citoyen a une responsabilité personnelle d'aider à préserver le patrimoine. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 38,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 6 : ENGAGEMENT CIVIQUE ET COMPORTEMENTS DE PRÉSERVATION PERSONNELS",
+            "description": "",
+            "order": 6,
+            "questions": [
+                {
+                    "number": 18,
+                    "text": "Pensez-vous que les citoyens ont une responsabilité personnelle d'aider à préserver le patrimoine culturel marocain (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord) ?",
+                    "type": "likert",
+                    "required": false,
+                    "order": 39,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 19,
+                    "text": "Au cours de l'année dernière, avez-vous personnellement entrepris l'une des actions suivantes ? Cochez tout ce qui s'applique.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 40,
+                    "options": [
+                        {
+                            "text": "Visité un site patrimonial pour soutenir sa vitalité culturelle et économique",
+                            "order": 1
+                        },
+                        {
+                            "text": "Encouragé des proches à visiter un site patrimonial ou à apprendre les traditions marocaines",
+                            "order": 2
+                        },
+                        {
+                            "text": "Partagé du contenu sur le patrimoine marocain sur les réseaux sociaux",
+                            "order": 3
+                        },
+                        {
+                            "text": "Participé à une activité communautaire de nettoyage, de conservation ou de sensibilisation",
+                            "order": 4
+                        },
+                        {
+                            "text": "Fait du bénévolat auprès d'une organisation culturelle, d'un musée ou d'un site patrimonial",
+                            "order": 5
+                        },
+                        {
+                            "text": "Contribué à préserver une pratique traditionnelle, une recette, un artisanat, une musique ou une tradition orale",
+                            "order": 6
+                        },
+                        {
+                            "text": "Fait un don de temps ou d'argent à une organisation ou une initiative patrimoniale",
+                            "order": 7
+                        },
+                        {
+                            "text": "Encouragé les jeunes membres de la famille à valoriser et apprendre le patrimoine marocain",
+                            "order": 8
+                        },
+                        {
+                            "text": "Aucune de ces actions",
+                            "order": 9
+                        }
+                    ]
+                },
+                {
+                    "number": 20,
+                    "text": "En vos propres mots, que faites-vous personnellement pour aider à préserver le patrimoine culturel marocain ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 41,
+                    "options": []
+                },
+                {
+                    "number": 21,
+                    "text": "Que pourriez-vous faire de plus pour aider à préserver le patrimoine culturel marocain ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 42,
+                    "options": []
+                },
+                {
+                    "number": 22,
+                    "text": "Quel est le principal obstacle qui vous empêche d'en faire davantage ? Sélectionnez l'obstacle le plus important.",
+                    "type": "radio",
+                    "required": false,
+                    "order": 43,
+                    "options": [
+                        {
+                            "text": "Je ne sais pas assez ce que je peux faire",
+                            "order": 1
+                        },
+                        {
+                            "text": "Les sites et institutions patrimoniaux sont trop éloignés ou difficiles d'accès",
+                            "order": 2
+                        },
+                        {
+                            "text": "Contraintes financières",
+                            "order": 3
+                        },
+                        {
+                            "text": "Manque de temps",
+                            "order": 4
+                        },
+                        {
+                            "text": "Je pense que c'est principalement la responsabilité du gouvernement",
+                            "order": 5
+                        },
+                        {
+                            "text": "Je ne connais pas les opportunités de participation existantes",
+                            "order": 6
+                        },
+                        {
+                            "text": "La préservation du patrimoine ne me semble pas personnellement pertinente dans ma vie quotidienne",
+                            "order": 7
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 7 : PERCEPTIONS INSTITUTIONNELLES ET CONFIANCE",
+            "description": "",
+            "order": 7,
+            "questions": [
+                {
+                    "number": 23,
+                    "text": "Globalement, êtes-vous satisfait(e) des efforts déployés par l'État pour préserver et promouvoir le patrimoine culturel marocain ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 44,
+                    "options": [
+                        {
+                            "text": "Très satisfait(e)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Satisfait(e)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Insatisfait(e)",
+                            "order": 3
+                        },
+                        {
+                            "text": "Très insatisfait(e)",
+                            "order": 4
+                        },
+                        {
+                            "text": "Sans opinion / Connaissance insuffisante",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 24,
+                    "text": "L'État fait suffisamment pour protéger le patrimoine du Maroc. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 45,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 24,
+                    "text": "Les sites patrimoniaux sont accessibles à tous les Marocains quelle que soit leur région. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 46,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 24,
+                    "text": "L'État communique clairement avec les citoyens sur les programmes patrimoniaux. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 47,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 24,
+                    "text": "Je fais confiance à la Direction du Patrimoine pour prendre de bonnes décisions. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 48,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 24,
+                    "text": "Les investissements patrimoniaux sont équitablement répartis entre toutes les régions. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 49,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 24,
+                    "text": "Les citoyens sont impliqués de manière significative dans les décisions patrimoniales. (1 = Pas du tout d'accord ; 5 = Tout à fait d'accord)",
+                    "type": "likert",
+                    "required": false,
+                    "order": 50,
+                    "options": [
+                        {
+                            "text": "1",
+                            "order": 1
+                        },
+                        {
+                            "text": "2",
+                            "order": 2
+                        },
+                        {
+                            "text": "3",
+                            "order": 3
+                        },
+                        {
+                            "text": "4",
+                            "order": 4
+                        },
+                        {
+                            "text": "5",
+                            "order": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 8 : ENGAGEMENT FUTUR",
+            "description": "",
+            "order": 8,
+            "questions": [
+                {
+                    "number": 25,
+                    "text": "À l'avenir, seriez-vous prêt(e) à participer à l'une des activités suivantes ? Cochez tout ce qui s'applique.",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 51,
+                    "options": [
+                        {
+                            "text": "Faire du bénévolat dans un site patrimonial, un musée ou une organisation culturelle",
+                            "order": 1
+                        },
+                        {
+                            "text": "Participer à des campagnes communautaires de sensibilisation au patrimoine",
+                            "order": 2
+                        },
+                        {
+                            "text": "Partager des informations sur le patrimoine marocain sur les réseaux sociaux",
+                            "order": 3
+                        },
+                        {
+                            "text": "Enseigner aux jeunes générations le patrimoine et les traditions marocaines",
+                            "order": 4
+                        },
+                        {
+                            "text": "Soutenir des pétitions ou des actions de plaidoyer pour la protection du patrimoine",
+                            "order": 5
+                        },
+                        {
+                            "text": "Contribuer financièrement à des organisations patrimoniales ou des projets de restauration",
+                            "order": 6
+                        },
+                        {
+                            "text": "Participer à des projets communautaires de documentation du patrimoine",
+                            "order": 7
+                        },
+                        {
+                            "text": "Aucune de ces activités",
+                            "order": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION 9 : RÉFLEXIONS LIBRES",
+            "description": "",
+            "order": 9,
+            "questions": [
+                {
+                    "number": 26,
+                    "text": "Quel est votre élément préféré du patrimoine culturel marocain, et que signifie-t-il pour vous personnellement ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 52,
+                    "options": []
+                },
+                {
+                    "number": 27,
+                    "text": "Quelles actions les citoyens devraient-ils entreprendre pour mieux protéger le patrimoine culturel marocain ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 53,
+                    "options": []
+                },
+                {
+                    "number": 28,
+                    "text": "Quelles recommandations avez-vous pour la Direction du Patrimoine afin de mieux engager le grand public dans la préservation du patrimoine ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 54,
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

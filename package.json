@@ -1,0 +1,53 @@
+{
+    "name": "moroccan-heritage-survey-platform",
+    "version": "1.0.0",
+    "description": "Academic Survey Data Collection and Analysis Platform - Moroccan Cultural Heritage National Survey",
+    "main": "backend/server.js",
+    "scripts": {
+        "start": "node backend/server.js",
+        "dev": "nodemon backend/server.js",
+        "init-db": "node backend/utils/init-database.js",
+        "seed": "node backend/utils/seed-surveys.js",
+        "import-questions": "node backend/utils/import-questions.js",
+        "backup": "node backend/utils/backup.js",
+        "test": "echo \"No tests specified yet\""
+    },
+    "keywords": [
+        "survey",
+        "research",
+        "heritage",
+        "morocco",
+        "academic",
+        "data-collection",
+        "patrimoine"
+    ],
+    "author": "Direction du Patrimoine - Ministère de la Jeunesse, de la Culture et de la Communication",
+    "license": "MIT",
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "bcryptjs": "^2.4.3",
+        "compression": "^1.8.1",
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.6",
+        "dotenv": "^16.6.1",
+        "express": "^4.22.2",
+        "express-rate-limit": "^7.5.1",
+        "express-session": "^1.19.0",
+        "helmet": "^7.2.0",
+        "json2csv": "^5.0.7",
+        "jsonwebtoken": "^9.0.3",
+        "mammoth": "^1.6.0",
+        "morgan": "^1.11.0",
+        "qrcode": "^1.5.4",
+        "sqlite3": "^5.1.7",
+        "uuid": "^9.0.1",
+        "xlsx": "^0.18.5"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    },
+    "engines": {
+        "node": ">=16.0.0",
+        "npm": ">=8.0.0"
+    }
+}

@@ -1,0 +1,740 @@
+{
+    "surveyCode": "Q1_PRIMARY",
+    "sections": [
+        {
+            "title": "SECTION A : INFORMATIONS TE CONCERNANT",
+            "description": "",
+            "order": 1,
+            "questions": [
+                {
+                    "number": 1,
+                    "text": "Quel âge as-tu ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 1,
+                    "options": [
+                        {
+                            "text": "6 ou 7 ans",
+                            "order": 1
+                        },
+                        {
+                            "text": "8 ou 9 ans",
+                            "order": 2
+                        },
+                        {
+                            "text": "10 ou 11 ans",
+                            "order": 3
+                        },
+                        {
+                            "text": "12 ans ou plus",
+                            "order": 4
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "Je suis :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 2,
+                    "options": [
+                        {
+                            "text": "Une fille",
+                            "order": 1
+                        },
+                        {
+                            "text": "Un garçon",
+                            "order": 2
+                        },
+                        {
+                            "text": "Je préfère ne pas répondre",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "Dans quelle classe es-tu ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 3,
+                    "options": [
+                        {
+                            "text": "1re année (CP)",
+                            "order": 1
+                        },
+                        {
+                            "text": "2e année (CE1)",
+                            "order": 2
+                        },
+                        {
+                            "text": "3e année (CE2)",
+                            "order": 3
+                        },
+                        {
+                            "text": "4e année (CM1)",
+                            "order": 4
+                        },
+                        {
+                            "text": "5e année (CM2)",
+                            "order": 5
+                        },
+                        {
+                            "text": "6e année",
+                            "order": 6
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "text": "Mon école est :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 4,
+                    "options": [
+                        {
+                            "text": "Publique",
+                            "order": 1
+                        },
+                        {
+                            "text": "Privée",
+                            "order": 2
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "text": "J'habite :",
+                    "type": "radio",
+                    "required": true,
+                    "order": 5,
+                    "options": [
+                        {
+                            "text": "Dans une ville ou une grande agglomération",
+                            "order": 1
+                        },
+                        {
+                            "text": "Dans les environs d'une ville",
+                            "order": 2
+                        },
+                        {
+                            "text": "Dans une petite ville ou un village",
+                            "order": 3
+                        },
+                        {
+                            "text": "À la campagne",
+                            "order": 4
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "text": "Dans quelle région du Maroc habites-tu ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 6,
+                    "options": [
+                        {
+                            "text": "Tanger-Tétouan-Al Hoceïma",
+                            "order": 1
+                        },
+                        {
+                            "text": "L'Oriental",
+                            "order": 2
+                        },
+                        {
+                            "text": "Fès-Meknès",
+                            "order": 3
+                        },
+                        {
+                            "text": "Rabat-Salé-Kénitra",
+                            "order": 4
+                        },
+                        {
+                            "text": "Béni Mellal-Khénifra",
+                            "order": 5
+                        },
+                        {
+                            "text": "Casablanca-Settat",
+                            "order": 6
+                        },
+                        {
+                            "text": "Marrakech-Safi",
+                            "order": 7
+                        },
+                        {
+                            "text": "Drâa-Tafilalet",
+                            "order": 8
+                        },
+                        {
+                            "text": "Souss-Massa",
+                            "order": 9
+                        },
+                        {
+                            "text": "Guelmim-Oued Noun",
+                            "order": 10
+                        },
+                        {
+                            "text": "Laâyoune-Sakia El Hamra",
+                            "order": 11
+                        },
+                        {
+                            "text": "Dakhla-Oued Ed-Dahab",
+                            "order": 12
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "text": "As-tu déjà visité un endroit historique, un monument ou un musée avec ton école ou ta famille ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 7,
+                    "options": [
+                        {
+                            "text": "Oui, plusieurs fois",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, une fois",
+                            "order": 2
+                        },
+                        {
+                            "text": "Non, jamais",
+                            "order": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION B : QUE SAIS-TU DU PATRIMOINE MAROCAIN ?",
+            "description": "Le patrimoine, ce sont les beaux endroits, les traditions, la musique, les métiers, les histoires et l'histoire que le Maroc a gardés pour nous depuis très longtemps.",
+            "order": 2,
+            "questions": [
+                {
+                    "number": 1,
+                    "text": "Donne-moi 3 choses traditionnelles dans ton pays :",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 8,
+                    "options": []
+                },
+                {
+                    "number": 2,
+                    "text": "Parmi ces exemples, lesquels font partie du patrimoine culturel marocain ? Entoure TOUT ce que tu penses être correct :",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 9,
+                    "options": [
+                        {
+                            "text": "A. La Médina de Fès",
+                            "order": 1
+                        },
+                        {
+                            "text": "B. Un centre commercial moderne",
+                            "order": 2
+                        },
+                        {
+                            "text": "C. La musique traditionnelle marocaine (Gnawa, musique andalouse, Ahwach)",
+                            "order": 3
+                        },
+                        {
+                            "text": "D. Ta maison",
+                            "order": 4
+                        },
+                        {
+                            "text": "E. Des ruines anciennes comme Volubilis",
+                            "order": 5
+                        },
+                        {
+                            "text": "F. Les métiers traditionnels comme la poterie, le tissage et le zellige",
+                            "order": 6
+                        },
+                        {
+                            "text": "G. Les vieilles histoires et poèmes transmis par les grands-parents",
+                            "order": 7
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "As-tu entendu parler de certains d'entre eux ? Coche ceux que tu connais :",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 10,
+                    "options": [
+                        {
+                            "text": "La Médina de Fès",
+                            "order": 1
+                        },
+                        {
+                            "text": "Le site archéologique de Volubilis",
+                            "order": 2
+                        },
+                        {
+                            "text": "Le Ksar d'Aït-Ben-Haddou",
+                            "order": 3
+                        },
+                        {
+                            "text": "La musique Gnawa",
+                            "order": 4
+                        },
+                        {
+                            "text": "Aucun d'entre eux",
+                            "order": 5
+                        },
+                        {
+                            "text": "Je les connais tous",
+                            "order": 6
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "text": "Où as-tu le plus appris sur le patrimoine marocain ? Entoure tes 2 réponses PRINCIPALES :",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 11,
+                    "options": [
+                        {
+                            "text": "A. De ma famille, mes grands-parents ou mes parents",
+                            "order": 1
+                        },
+                        {
+                            "text": "B. À l'école, par des enseignants ou des manuels scolaires",
+                            "order": 2
+                        },
+                        {
+                            "text": "C. À la télévision ou à la radio",
+                            "order": 3
+                        },
+                        {
+                            "text": "D. Sur les réseaux sociaux ou YouTube",
+                            "order": 4
+                        },
+                        {
+                            "text": "E. En visitant un site patrimonial ou un musée",
+                            "order": 5
+                        },
+                        {
+                            "text": "F. Je n'ai pas beaucoup appris sur le patrimoine",
+                            "order": 6
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION C : COMMENT TE SENS-TU FACE AU PATRIMOINE MAROCAIN ?",
+            "description": "",
+            "order": 3,
+            "questions": [
+                {
+                    "number": 5,
+                    "text": "À quel degré es-tu fier/fière de la culture marocaine ?",
+                    "type": "likert",
+                    "required": true,
+                    "order": 12,
+                    "options": [
+                        {
+                            "text": "Très content(e)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Content(e)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Entre les deux",
+                            "order": 3
+                        },
+                        {
+                            "text": "Triste",
+                            "order": 4
+                        },
+                        {
+                            "text": "Très triste",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "text": "Comment te sens-tu quand tu visites un monument historique ?",
+                    "type": "likert",
+                    "required": true,
+                    "order": 13,
+                    "options": [
+                        {
+                            "text": "Très content(e)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Content(e)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Entre les deux",
+                            "order": 3
+                        },
+                        {
+                            "text": "Triste",
+                            "order": 4
+                        },
+                        {
+                            "text": "Très triste",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "text": "Comment te sens-tu quand tu apprends qu'un monument historique ou une tradition disparaît ou est détruit(e) ?",
+                    "type": "likert",
+                    "required": true,
+                    "order": 14,
+                    "options": [
+                        {
+                            "text": "Très content(e)",
+                            "order": 1
+                        },
+                        {
+                            "text": "Content(e)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Entre les deux",
+                            "order": 3
+                        },
+                        {
+                            "text": "Triste",
+                            "order": 4
+                        },
+                        {
+                            "text": "Très triste",
+                            "order": 5
+                        }
+                    ]
+                },
+                {
+                    "number": 8,
+                    "text": "À quel point penses-tu qu'il est important de maintenir les traditions, les métiers, la musique et les histoires marocaines ?",
+                    "type": "radio",
+                    "required": true,
+                    "order": 15,
+                    "options": [
+                        {
+                            "text": "Très important",
+                            "order": 1
+                        },
+                        {
+                            "text": "Assez important",
+                            "order": 2
+                        },
+                        {
+                            "text": "Un peu important",
+                            "order": 3
+                        },
+                        {
+                            "text": "Pas du tout important",
+                            "order": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION D : QUE FAIS-TU ?",
+            "description": "",
+            "order": 4,
+            "questions": [
+                {
+                    "number": 9,
+                    "text": "Au cours de l'année passée, as-tu fait l'une de ces choses ? Coche tout ce qui s'applique :",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 16,
+                    "options": [
+                        {
+                            "text": "Visité un site patrimonial, une médina ou un monument historique",
+                            "order": 1
+                        },
+                        {
+                            "text": "Visité un musée",
+                            "order": 2
+                        },
+                        {
+                            "text": "Assisté à une fête ou une cérémonie traditionnelle",
+                            "order": 3
+                        },
+                        {
+                            "text": "Écouté de la musique traditionnelle marocaine",
+                            "order": 4
+                        },
+                        {
+                            "text": "Lu un livre ou regardé un film sur l'histoire ou les traditions marocaines",
+                            "order": 5
+                        },
+                        {
+                            "text": "Partagé quelque chose sur le patrimoine marocain avec des amis ou la famille",
+                            "order": 6
+                        },
+                        {
+                            "text": "Aidé à préserver une tradition familiale",
+                            "order": 7
+                        },
+                        {
+                            "text": "Aucune de ces choses",
+                            "order": 8
+                        }
+                    ]
+                },
+                {
+                    "number": 10,
+                    "text": "Est-ce que ta famille te raconte des histoires sur l'histoire du Maroc, de ta ville ou de tes ancêtres ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 17,
+                    "options": [
+                        {
+                            "text": "Oui, très souvent",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, parfois",
+                            "order": 2
+                        },
+                        {
+                            "text": "Rarement",
+                            "order": 3
+                        },
+                        {
+                            "text": "Jamais",
+                            "order": 4
+                        }
+                    ]
+                },
+                {
+                    "number": 11,
+                    "text": "Qu'est-ce que tu fais pour aider à préserver le patrimoine marocain ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 18,
+                    "options": []
+                },
+                {
+                    "number": 12,
+                    "text": "Qu'est-ce qui t'empêche d'en apprendre plus sur le patrimoine ou de visiter des sites ?",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 19,
+                    "options": [
+                        {
+                            "text": "Je n'ai pas le temps",
+                            "order": 1
+                        },
+                        {
+                            "text": "C'est trop loin ou difficile d'y aller",
+                            "order": 2
+                        },
+                        {
+                            "text": "Je n'ai pas assez d'argent",
+                            "order": 3
+                        },
+                        {
+                            "text": "Je ne le trouve pas assez intéressant",
+                            "order": 4
+                        },
+                        {
+                            "text": "Je ne sais pas où aller",
+                            "order": 5
+                        },
+                        {
+                            "text": "Rien ne m'empêche ; je suis intéressé(e)",
+                            "order": 6
+                        },
+                        {
+                            "text": "Autre",
+                            "order": 7
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION E : RESPONSABILITÉ ET AVENIR",
+            "description": "",
+            "order": 5,
+            "questions": [
+                {
+                    "number": 13,
+                    "text": "Qui penses-tu être responsable de la protection du patrimoine marocain ? Coche tout ce avec quoi tu es d'accord :",
+                    "type": "checkbox",
+                    "required": false,
+                    "order": 20,
+                    "options": [
+                        {
+                            "text": "L'État",
+                            "order": 1
+                        },
+                        {
+                            "text": "Les enseignants et les écoles",
+                            "order": 2
+                        },
+                        {
+                            "text": "Les familles et les parents",
+                            "order": 3
+                        },
+                        {
+                            "text": "Les jeunes comme moi",
+                            "order": 4
+                        },
+                        {
+                            "text": "Tout le monde ensemble",
+                            "order": 5
+                        },
+                        {
+                            "text": "Je ne suis pas sûr(e)",
+                            "order": 6
+                        }
+                    ]
+                },
+                {
+                    "number": 14,
+                    "text": "Penses-tu que toi, en tant qu'enfant, tu peux faire quelque chose pour aider à protéger le patrimoine marocain ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 21,
+                    "options": [
+                        {
+                            "text": "Oui, certainement",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, peut-être",
+                            "order": 2
+                        },
+                        {
+                            "text": "Je ne suis pas sûr(e)",
+                            "order": 3
+                        },
+                        {
+                            "text": "Non",
+                            "order": 4
+                        }
+                    ]
+                },
+                {
+                    "number": 15,
+                    "text": "Si tu pouvais faire UNE chose pour aider à protéger le patrimoine marocain, qu'est-ce que ce serait ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 22,
+                    "options": []
+                },
+                {
+                    "number": 16,
+                    "text": "Y a-t-il un site ou une tradition dans ta ville ou ta région qui a besoin, selon toi, de plus d'attention et de soins ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 23,
+                    "options": []
+                }
+            ]
+        },
+        {
+            "title": "SECTION F : APPRENTISSAGE ET INSTITUTIONS",
+            "description": "",
+            "order": 6,
+            "questions": [
+                {
+                    "number": 17,
+                    "text": "Est-ce que ton école t'a déjà emmené(e) visiter un monument historique ou un musée ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 24,
+                    "options": [
+                        {
+                            "text": "Oui, plusieurs fois",
+                            "order": 1
+                        },
+                        {
+                            "text": "Oui, une fois",
+                            "order": 2
+                        },
+                        {
+                            "text": "Non, jamais",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 18,
+                    "text": "As-tu déjà entendu parler d'une institution qui protège le patrimoine du Maroc, appelée la Direction du Patrimoine ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 25,
+                    "options": [
+                        {
+                            "text": "Oui",
+                            "order": 1
+                        },
+                        {
+                            "text": "Pas sûr(e)",
+                            "order": 2
+                        },
+                        {
+                            "text": "Non",
+                            "order": 3
+                        }
+                    ]
+                },
+                {
+                    "number": 19,
+                    "text": "Penses-tu que l'État fait suffisamment pour protéger le patrimoine marocain ?",
+                    "type": "radio",
+                    "required": false,
+                    "order": 26,
+                    "options": [
+                        {
+                            "text": "Oui, il fait beaucoup",
+                            "order": 1
+                        },
+                        {
+                            "text": "Il fait des choses, mais pourrait en faire plus",
+                            "order": 2
+                        },
+                        {
+                            "text": "Je ne pense pas qu'il en fasse assez",
+                            "order": 3
+                        },
+                        {
+                            "text": "Je ne sais pas",
+                            "order": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SECTION G : RÉFLEXIONS OUVERTES",
+            "description": "",
+            "order": 7,
+            "questions": [
+                {
+                    "number": 20,
+                    "text": "Quelle est ta partie préférée du patrimoine culturel marocain et pourquoi ?",
+                    "type": "textarea",
+                    "required": false,
+                    "order": 27,
+                    "options": []
+                }
+            ]
+        }
+    ]
+}
