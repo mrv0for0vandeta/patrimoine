@@ -1,44 +1,9 @@
 {
     "version": 2,
-    "builds": [
+    "rewrites": [
         {
-            "src": "backend/server.js",
-            "use": "@vercel/node"
+            "source": "/(.*)",
+            "destination": "/api"
         }
-    ],
-    "routes": [
-        {
-            "src": "/api/(.*)",
-            "dest": "backend/server.js"
-        },
-        {
-            "src": "/health",
-            "dest": "backend/server.js"
-        },
-        {
-            "src": "/admin(.*)",
-            "dest": "backend/server.js"
-        },
-        {
-            "src": "/survey/(.*)",
-            "dest": "backend/server.js"
-        },
-        {
-            "src": "/(.*\\.(css|js|json|png|jpg|jpeg|gif|svg|ico|html))",
-            "dest": "frontend/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "backend/server.js"
-        }
-    ],
-    "env": {
-        "NODE_ENV": "production"
-    },
-    "functions": {
-        "backend/server.js": {
-            "memory": 1024,
-            "maxDuration": 10
-        }
-    }
+    ]
 }
