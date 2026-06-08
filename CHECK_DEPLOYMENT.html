@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Vercel Deployment Status</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .check-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #dee2e6;
+        }
+
+        .check-item.loading {
+            border-left-color: #ffc107;
+        }
+
+        .check-item.success {
+            border-left-color: #28a745;
+        }
+
+        .check-item.error {
+            border-left-color: #dc3545;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .button.green {
+            background: #28a745;
+        }
+
+        .button.green:hover {
+            background: #218838;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        #timer {
+            font-size: 1.2em;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚀 Deployment Status Checker</h1>
+        <p>Checking your Vercel deployment...</p>
+
+        <div class="status pending" id="overall-status">
+            ⏳ Deployment In Progress
+        </div>
+
+        <div class="info-box">
+            <strong>What happened:</strong>
+            <p>The code has been fixed and pushed to GitHub. Vercel is now automatically redeploying.</p>
+            <p style="margin-top: 10px;"><strong>Fix:</strong> All routes now use auto-detecting database manager that
+                works with both PostgreSQL (production) and SQLite (development).</p>
+        </div>
+
+        <p><strong>Estimated deployment time:</strong> <span id="timer">2-3 minutes</span></p>
+
+        <div class="check-box">
+            <h3 style="margin-bottom: 15px;">Running Checks:</h3>
+
+            <div class="check-item loading" id="check-home">
+                <span class="icon">
+                    <div class="loader"></div>
+                </span>
+                <div>
+                    <strong>Homepage</strong>
+                    <div id="home-status">Checking...</div>
+                </div>
+            </div>
+
+            <div class="check-item loading" id="check-health">
+                <span class="icon">
+                    <div class="loader"></div>
+                </span>
+                <div>
+                    <strong>Health Check API</strong>
+                    <div id="health-status">Checking...</div>
+                </div>
+            </div>
+
+            <div class="check-item loading" id="check-admin">
+                <span class="icon">
+                    <div class="loader"></div>
+                </span>
+                <div>
+                    <strong>Admin Panel</strong>
+                    <div id="admin-status">Checking...</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-box" style="display: none; margin-top: 30px;">
+            <h3>Results:</h3>
+            <pre id="results"></pre>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="https://patrimoine-jet.vercel.app/" target="_blank" class="button">
+                Visit Your Site →
+            </a>
+            <a href="https://patrimoine-jet.vercel.app/health" target="_blank" class="button green">
+                Check Health API →
+            </a>
+            <a href="https://vercel.com/mrv0for0vandeta/patrimoine-jet" target="_blank" class="button">
+                View Vercel Dashboard →
+            </a>
+            <button onclick="runChecks()" class="button green">
+                🔄 Re-check Now
+            </button>
+        </div>
+
+        <div class="info-box" style="margin-top: 30px;">
+            <strong>✅ Expected Results:</strong>
+            <ul style="margin-top: 10px; padding-left: 20px;">
+                <li>Homepage: Should load without 500 error</li>
+                <li>Health API: Should return <span class="code">{"success": true}</span></li>
+                <li>Admin Panel: Should show login page</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let checkCount = 0;
+        const maxChecks = 20;
+        let checkInterval;
+
+        async function checkEndpoint(url) {
+            try {
+                const response = await fetch(url, { mode: 'cors' });
+                return {
+                    success: response.ok,
+                    status: response.status,
+                    data: await response.text()
+                };
+            } catch (error) {
+                return {
+                    success: false,
+                    error: error.message
+                };
+            }
+        }
+
+        async function runChecks() {
+            checkCount++;
+
+            // Check homepage
+            const homeResult = await checkEndpoint('https://patrimoine-jet.vercel.app/');
+            updateCheck('home', homeResult.success,
+                homeResult.success ? 'Homepage is live! ✅' : `Error: ${homeResult.status || homeResult.error}`);
+
+            // Check health API
+            const healthResult = await checkEndpoint('https://patrimoine-jet.vercel.app/health');
+            let healthSuccess = false;
+            let healthMessage = '';
+
+            if (healthResult.success) {
+                try {
+                    const data = JSON.parse(healthResult.data);
+                    healthSuccess = data.success === true;
+                    healthMessage = healthSuccess ? 'API is healthy! ✅' : 'API returned but unhealthy';
+                } catch {
+                    healthMessage = 'API responded but invalid JSON';
+                }
+            } else {
+                healthMessage = `Error: ${healthResult.status || healthResult.error}`;
+            }
+            updateCheck('health', healthSuccess, healthMessage);
+
+            // Check admin panel
+            const adminResult = await checkEndpoint('https://patrimoine-jet.vercel.app/admin');
+            updateCheck('admin', adminResult.success,
+                adminResult.success ? 'Admin panel is accessible! ✅' : `Error: ${adminResult.status || adminResult.error}`);
+
+            // Update overall status
+            if (homeResult.success && healthSuccess && adminResult.success) {
+                document.getElementById('overall-status').className = 'status success';
+                document.getElementById('overall-status').textContent = '✅ Deployment Successful!';
+                clearInterval(checkInterval);
+
+                document.getElementById('result-box').style.display = 'block';
+                document.getElementById('results').textContent =
+                    '🎉 Your site is now live and working!\n\n' +
+                    'Homepage: https://patrimoine-jet.vercel.app/\n' +
+                    'Admin: https://patrimoine-jet.vercel.app/admin\n' +
+                    'API Health: https://patrimoine-jet.vercel.app/health\n\n' +
+                    'Login Credentials:\n' +
+                    '  Username: admin\n' +
+                    '  Password: Patrimoine2024!';
+            } else if (checkCount >= maxChecks) {
+                document.getElementById('overall-status').className = 'status error';
+                document.getElementById('overall-status').textContent = '⚠️ Deployment taking longer than expected';
+                clearInterval(checkInterval);
+            }
+        }
+
+        function updateCheck(type, success, message) {
+            const element = document.getElementById(`check-${type}`);
+            const statusElement = document.getElementById(`${type}-status`);
+
+            if (success) {
+                element.className = 'check-item success';
+                element.querySelector('.icon').innerHTML = '✅';
+            } else {
+                element.className = 'check-item error';
+                element.querySelector('.icon').innerHTML = '❌';
+            }
+
+            statusElement.textContent = message;
+        }
+
+        // Start checking immediately
+        runChecks();
+
+        // Then check every 15 seconds
+        checkInterval = setInterval(runChecks, 15000);
+
+        // Update timer
+        let seconds = 180;
+        setInterval(() => {
+            if (seconds > 0) {
+                seconds--;
+                const mins = Math.floor(seconds / 60);
+                const secs = seconds % 60;
+                document.getElementById('timer').textContent =
+                    `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

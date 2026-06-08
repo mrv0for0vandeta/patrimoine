@@ -10,7 +10,9 @@
         "seed": "node backend/utils/seed-surveys.js",
         "import-questions": "node backend/utils/import-questions.js",
         "backup": "node backend/utils/backup.js",
-        "test": "echo \"No tests specified yet\""
+        "test": "echo \"No tests specified yet\"",
+        "deploy:cloudflare": "wrangler pages deploy frontend --project-name=moroccan-heritage-survey",
+        "cf:login": "wrangler login"
     },
     "keywords": [
         "survey",

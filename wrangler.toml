@@ -1,0 +1,14 @@
+name = "moroccan-heritage-survey"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "./frontend"
+
+[env.production]
+vars = { NODE_ENV = "production" }
+
+# Environment variables (set via Cloudflare dashboard or wrangler CLI)
+# DATABASE_URL (Supabase connection string)
+# JWT_SECRET
+# SESSION_SECRET
+# ADMIN_USERNAME
+# ADMIN_PASSWORD
+# ADMIN_EMAIL
