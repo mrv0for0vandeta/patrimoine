@@ -1,0 +1,10 @@
+# Google Cloud ignore file
+.git
+.gitignore
+node_modules/
+.env
+.env.local
+*.md
+.vscode/
+logs/
+backups/
