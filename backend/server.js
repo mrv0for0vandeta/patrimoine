@@ -292,7 +292,25 @@ async function startServer() {
     }
 }
 
-// Start the server
-startServer();
+// Initialize database
+let dbInitialized = false;
+async function ensureDbInit() {
+    if (!dbInitialized) {
+        await dbManager.initialize();
+        dbInitialized = true;
+    }
+}
 
-module.exports = app;
+// Start the server (only in non-Vercel environment)
+if (!process.env.VERCEL) {
+    startServer();
+} else {
+    // For Vercel, just initialize database
+    ensureDbInit().catch(console.error);
+}
+
+// Export for Vercel serverless
+module.exports = async (req, res) => {
+    await ensureDbInit();
+    return app(req, res);
+};
