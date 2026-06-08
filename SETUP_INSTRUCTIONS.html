@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vercel Setup - Copy & Paste</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .var {
+            background: #f4f4f4;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #0070f3;
+        }
+
+        .name {
+            font-weight: bold;
+            color: #0070f3;
+        }
+
+        .value {
+            font-family: monospace;
+            background: white;
+            padding: 5px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        button {
+            background: #0070f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #0051cc;
+        }
+
+        .copied {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🚀 Vercel Environment Variables - Just Copy & Paste!</h1>
+
+    <p><strong>Go to your Vercel dashboard:</strong> <a
+            href="https://vercel.com/mrv0for0vandeta/patrimoine-jet/settings/environment-variables"
+            target="_blank">Click here</a></p>
+
+    <p>Then click "Add" and copy-paste each one:</p>
+
+    <div class="var">
+        <div class="name">DATABASE_URL</div>
+        <input type="text" class="value"
+            value="postgresql://postgres.elswjgrymyiklvsjimav:Medmahdi2025+@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
+            readonly style="width:100%">
+        <button onclick="copy(this)">Copy</button>
+        <span class="result"></span>
+    </div>
+
+    <div class="var">
+        <div class="name">NODE_ENV</div>
+        <input type="text" class="value" value="production" readonly style="width:100%">
+        <button onclick="copy(this)">Copy</button>
+        <span class="result"></span>
+    </div>
+
+    <div class="var">
+        <div class="name">JWT_SECRET</div>
+        <input type="text" class="value" value="moroccan_heritage_jwt_secret_2024_secure_minimum_32_chars" readonly
+            style="width:100%">
+        <button onclick="copy(this)">Copy</button>
+        <span class="result"></span>
+    </div>
+
+    <div class="var">
+        <div class="name">SESSION_SECRET</div>
+        <input type="text" class="value" value="moroccan_session_secret_2024_secure_minimum_32_chars" readonly
+            style="width:100%">
+        <button onclick="copy(this)">Copy</button>
+        <span class="result"></span>
+    </div>
+
+    <div class="var">
+        <div class="name">ADMIN_USERNAME</div>
+        <input type="text" class="value" value="admin" readonly style="width:100%">
+        <button onclick="copy(this)">Copy</button>
+        <span class="result"></span>
+    </div>
+
+    <div class="var">
+        <div class="name">ADMIN_PASSWORD</div>
+        <input type="text" class="value" value="Patrimoine2024!" readonly style="width:100%">
+        <button onclick="copy(this)">Copy</button>
+        <span class="result"></span>
+    </div>
+
+    <div class="var">
+        <div class="name">ADMIN_EMAIL</div>
+        <input type="text" class="value" value="admin@patrimoine.gov.ma" readonly style="width:100%">
+        <button onclick="copy(this)">Copy</button>
+        <span class="result"></span>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>After adding all 7:</h2>
+    <ol>
+        <li>Go to <strong>Deployments</strong> tab</li>
+        <li>Click <strong>three dots (•••)</strong> on latest deployment</li>
+        <li>Click <strong>Redeploy</strong></li>
+        <li>Wait 2 minutes</li>
+        <li>Visit: <a href="https://patrimoine-jet.vercel.app" target="_blank">https://patrimoine-jet.vercel.app</a>
+        </li>
+    </ol>
+
+    <script>
+        function copy(button) {
+            const input = button.parentElement.querySelector('input');
+            input.select();
+            document.execCommand('copy');
+            button.nextElementSibling.textContent = '✓ Copied!';
+            button.nextElementSibling.className = 'copied';
+            setTimeout(() => {
+                button.nextElementSibling.textContent = '';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

@@ -4,6 +4,8 @@
 
 ### *Plateforme Nationale d'Enquête sur le Patrimoine Culturel Marocain*
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/BNAHJz?referralCode=alphasec)
+
 [![Node.js](https://img.shields.io/badge/Node.js-16.x+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-4.x-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 [![SQLite](https://img.shields.io/badge/SQLite-3.x-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
