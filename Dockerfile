@@ -1,4 +1,4 @@
-# Dockerfile for Moroccan Heritage Survey Platform
+# Dockerfile for Moroccan Heritage Survey Platform - Google Cloud Run
 FROM node:18-alpine
 
 # Install Python and build tools for SQLite compilation
@@ -16,15 +16,14 @@ RUN npm ci --only=production
 # Copy application code
 COPY . .
 
-# Create data directory
-RUN mkdir -p /data
+# Create data directory with proper permissions
+RUN mkdir -p /data && chmod 777 /data
 
-# Expose port
+# Expose port (Cloud Run uses PORT env var)
 EXPOSE 8080
 
 # Set environment
 ENV NODE_ENV=production
-ENV PORT=8080
 ENV DATABASE_PATH=/data/survey_platform.db
 
 # Initialize database and start
