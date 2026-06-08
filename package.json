@@ -24,6 +24,7 @@
     "author": "Direction du Patrimoine - Ministère de la Jeunesse, de la Culture et de la Communication",
     "license": "MIT",
     "dependencies": {
+        "@supabase/supabase-js": "^2.108.0",
         "bcrypt": "^6.0.0",
         "bcryptjs": "^2.4.3",
         "compression": "^1.8.1",
@@ -38,6 +39,7 @@
         "jsonwebtoken": "^9.0.3",
         "mammoth": "^1.6.0",
         "morgan": "^1.11.0",
+        "pg": "^8.21.0",
         "qrcode": "^1.5.4",
         "sqlite3": "^5.1.7",
         "uuid": "^9.0.1",
